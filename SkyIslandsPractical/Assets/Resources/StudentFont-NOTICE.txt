@@ -1,0 +1,1 @@
+Sky Islands UI is a merged and renamed derivative of Noto Sans Regular and Noto Sans Thai Regular from https://github.com/notofonts/noto-fonts, distributed under SIL Open Font License 1.1. The accompanying StudentFont-LICENSE.txt contains the original license and copyright notices. Font names were changed for this modified font.

@@ -55,8 +55,10 @@ namespace SirikanyaKawilawan
             Panel(root, "Track", 0, 12, 500, 12, new Color(0.21f, 0.33f, 0.38f));
             var fillArea = Rect(root, "Fill Area", 0, 12, 500, 12);
             var fill = Panel(fillArea, "Fill", 0, 0, 500, 12, Accent); slider.fillRect = fill.rectTransform;
+            fill.rectTransform.anchorMin=Vector2.zero;fill.rectTransform.anchorMax=Vector2.one;fill.rectTransform.sizeDelta=Vector2.zero;fill.rectTransform.anchoredPosition=Vector2.zero;
             var handleArea = Rect(root, "Handle Area", 0, 0, 500, 40);
             var handle = Panel(handleArea, "Handle", 0, 0, 24, 40, Color.white); slider.handleRect = handle.rectTransform; slider.targetGraphic = handle;
+            handle.rectTransform.pivot=new Vector2(0.5f,0.5f);handle.rectTransform.anchorMin=new Vector2(0,0);handle.rectTransform.anchorMax=new Vector2(0,1);handle.rectTransform.sizeDelta=new Vector2(24,0);handle.rectTransform.anchoredPosition=Vector2.zero;
             slider.value = value;
             var percent = Text(parent, title + " Value", Mathf.RoundToInt(value * 100) + "%", x + 425, y, 80, 45, 23, Accent);
             slider.onValueChanged.AddListener(v => { callback(v); percent.text = Mathf.RoundToInt(v * 100) + "%"; }); return slider;

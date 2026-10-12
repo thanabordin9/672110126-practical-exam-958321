@@ -1,15 +1,25 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Linq;
 
 namespace SirikanyaKawilawan
 {
     public sealed class SceneScreen : MonoBehaviour
     {
+        public RectTransform uiCanvas;
         void Start()
+        {
+            Cursor.lockState = CursorLockMode.None; Cursor.visible = true;
+            if(uiCanvas==null)CreateCanvas();
+            BindCanvas();
+        }
+        public void CreateCanvas()
         {
             Cursor.lockState = CursorLockMode.None; Cursor.visible = true;
             string scene = gameObject.scene.name;
             var canvas = UiKit.Canvas();
+            uiCanvas=canvas;
             if (scene == "Options")
             {
                 canvas.GetComponent<Canvas>().sortingOrder = 100;
@@ -39,8 +49,8 @@ namespace SirikanyaKawilawan
                     Back(panel.transform); break;
                 case "Options":
                     Heading(panel.transform, "MAKE IT\nYOUR OWN", "Independent music and sound effect controls.");
-                    UiKit.Slider(panel.transform, "Background Music", 42, 310, AudioService.Instance.MusicVolume, AudioService.Instance.SetMusicVolume);
-                    UiKit.Slider(panel.transform, "Sound Effects", 42, 460, AudioService.Instance.EffectsVolume, AudioService.Instance.SetEffectsVolume);
+                    UiKit.Slider(panel.transform, "Background Music", 42, 310, AudioService.Instance != null ? AudioService.Instance.MusicVolume : 0.35f, v => AudioService.Instance?.SetMusicVolume(v));
+                    UiKit.Slider(panel.transform, "Sound Effects", 42, 460, AudioService.Instance != null ? AudioService.Instance.EffectsVolume : 0.85f, v => AudioService.Instance?.SetEffectsVolume(v));
                     var okay = UiKit.Button(panel.transform, "OK / Save and Return", 42, 600, 565, SceneNavigation.CloseOptions, true);
                     if (UnityEngine.EventSystems.EventSystem.current != null) UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(okay.gameObject);
                     break;
@@ -64,6 +74,64 @@ namespace SirikanyaKawilawan
             UiKit.Panel(canvas, "Footer Background", 90, 836, 1420, 44, UiKit.Ink);
             var identity = StudentDetailsPanel.IdentityText(canvas, "Student Identity", StudentProfile.Summary, 108, 840, 1360, 35, 16);
             if (scene == "MainMenu") StudentDetailsPanel.Build(canvas, () => identity.text = StudentProfile.Summary);
+        }
+        public void BindCanvas()
+        {
+            string scene=gameObject.scene.name;
+            var texts=uiCanvas.GetComponentsInChildren<Text>(true);
+            var identity=texts.First(t=>t.name=="Student Identity");identity.text=StudentProfile.Summary;
+            if(scene=="Credits")texts.First(t=>t.name=="Student Credits").text="Name: "+StudentProfile.DisplayName+"\nStudent Code: "+StudentProfile.StudentCode+"\nEnglish Name: "+StudentProfile.EnglishName+"   Section: "+StudentProfile.Section;
+            if(scene=="Win"||scene=="GameOver")
+            {
+                texts.First(t=>t.name=="Final Score").text=SceneNavigation.FinalScore.ToString("N0");
+                texts.First(t=>t.name=="Result Label").text="FINAL SCORE / STAGE "+SceneNavigation.LastStage;
+            }
+            foreach(var button in uiCanvas.GetComponentsInChildren<Button>(true))
+            {
+                if(button.name=="Save Student Details")continue;
+                var action=button.GetComponent<SceneButtonAction>();
+                if(action==null)
+                {
+                    action=button.gameObject.AddComponent<SceneButtonAction>();
+                    switch(button.name)
+                    {
+                        case "Start Adventure":action.targetScene="StageSelection";break;
+                        case "Credits":action.targetScene="Credits";break;
+                        case "Back":case "Back to Main Menu":action.targetScene="MainMenu";break;
+                        case "Options":action.command=SceneButtonAction.Command.OpenOptions;break;
+                        case "OK / Save and Return":action.command=SceneButtonAction.Command.CloseOptions;break;
+                        case "Try Again":action.command=SceneButtonAction.Command.Retry;break;
+                        case "Exit":action.command=SceneButtonAction.Command.Quit;break;
+                        case "01 / Capsule Sky Run":action.command=SceneButtonAction.Command.StartStage;action.stage=1;break;
+                        case "02 / Humanoid Explorer":action.command=SceneButtonAction.Command.StartStage;action.stage=2;break;
+                    }
+                }
+                button.onClick.RemoveAllListeners();if(button.onClick.GetPersistentEventCount()==0)button.onClick.AddListener(action.Invoke);
+            }
+            if(scene=="MainMenu")
+            {
+                var panel=uiCanvas.GetComponentsInChildren<RectTransform>(true).First(t=>t.name=="Student Details");
+                var form=panel.GetComponent<StudentForm>();
+                if(form==null)
+                {
+                    form=panel.gameObject.AddComponent<StudentForm>();var fields=panel.GetComponentsInChildren<InputField>();
+                    form.nameInput=fields.First(f=>f.name=="Student Name Input");form.englishInput=fields.First(f=>f.name=="English Name Input");
+                    form.codeInput=fields.First(f=>f.name=="Student Code Input");form.sectionInput=fields.First(f=>f.name=="Student Section Input");
+                    form.status=texts.First(t=>t.name=="Student Save Status");form.identity=identity;
+                }
+                var save=panel.GetComponentsInChildren<Button>().First();save.onClick.RemoveAllListeners();if(save.onClick.GetPersistentEventCount()==0)save.onClick.AddListener(form.Save);
+                form.Refresh();
+            }
+            if(scene=="Options")
+            {
+                foreach(var slider in uiCanvas.GetComponentsInChildren<Slider>())
+                {
+                    var binding=slider.GetComponent<VolumeControlBinding>();
+                    if(binding==null){binding=slider.gameObject.AddComponent<VolumeControlBinding>();binding.slider=slider;binding.music=slider.name=="Background Music Slider";binding.percentage=texts.First(t=>t.name==(binding.music?"Background Music Value":"Sound Effects Value"));}
+                    slider.onValueChanged.RemoveAllListeners();if(slider.onValueChanged.GetPersistentEventCount()==0)slider.onValueChanged.AddListener(binding.Apply);
+                }
+                if(UnityEngine.EventSystems.EventSystem.current!=null)UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(uiCanvas.GetComponentsInChildren<Button>().First(b=>b.name=="OK / Save and Return").gameObject);
+            }
         }
         static void Heading(Transform panel, string title, string description)
         {

@@ -16,6 +16,8 @@ namespace SirikanyaKawilawan.Tests
     public sealed class ExamAudioCapture : MonoBehaviour
     {
         public static FileStream Stream;
+        public static StreamWriter Index;
+        public static long Origin;
         public static int Channels = 2;
         public static readonly object Gate = new object();
         void OnAudioFilterRead(float[] data, int channels)
@@ -25,6 +27,7 @@ namespace SirikanyaKawilawan.Tests
                 if (Stream == null) return;
                 Channels = channels;
                 var bytes = new byte[data.Length * 4];
+                Index?.WriteLine(((System.Diagnostics.Stopwatch.GetTimestamp()-Origin)/(double)System.Diagnostics.Stopwatch.Frequency).ToString("F6",System.Globalization.CultureInfo.InvariantCulture)+"\t"+Stream.Position+"\t"+data.Length+"\t"+channels);
                 Buffer.BlockCopy(data, 0, bytes, 0, bytes.Length); Stream.Write(bytes, 0, bytes.Length);
             }
         }
@@ -74,6 +77,7 @@ namespace SirikanyaKawilawan.Tests
             render=new RenderTexture(1280,720,24);pixels=new Texture2D(1280,720,TextureFormat.RGB24,false);
             index=new StreamWriter(Path.Combine(folder,"frames.tsv"));chapters=new StreamWriter(Path.Combine(folder,"chapters.tsv"));
             ExamAudioCapture.Stream=new FileStream(Path.Combine(folder,"audio.f32"),FileMode.Create);
+            ExamAudioCapture.Index=new StreamWriter(Path.Combine(folder,"audio.tsv"));ExamAudioCapture.Origin=System.Diagnostics.Stopwatch.GetTimestamp();
             started=Time.realtimeSinceStartupAsDouble;
             SceneNavigation.Load("MainMenu");yield return null;yield return null;
             music=AudioService.Instance.MusicVolume;effects=AudioService.Instance.EffectsVolume;
@@ -100,6 +104,7 @@ namespace SirikanyaKawilawan.Tests
             Keys(Key.W);yield return Watch(1.8f);Keys();yield return Watch(0.2f);
             Keys(Key.D);yield return Watch(0.23f);Keys();yield return Watch(0.4f);
             Keys(Key.A);yield return Watch(0.47f);Keys();yield return Watch(0.4f);
+            Keys(Key.S);yield return Watch(0.12f);Keys();yield return Watch(0.3f);
             Keys(Key.W);yield return Watch(0.32f);Keys();yield return Watch(0.4f);
             Keys(Key.A);yield return Watch(1.2f);Keys();yield return Watch(2.5f);
             Assert.That(SceneManager.GetActiveScene().name,Is.EqualTo("GameOver"));Chapter("Q1 Q5 falling causes GameOver");yield return Watch(3);
@@ -124,7 +129,7 @@ namespace SirikanyaKawilawan.Tests
             if(keyboard!=null)InputSystem.RemoveDevice(keyboard);if(mouse!=null)InputSystem.RemoveDevice(mouse);
             InputSystem.settings.backgroundBehavior=background;InputSystem.settings.editorInputBehaviorInPlayMode=editorInput;
             if(AudioService.Instance!=null){AudioService.Instance.SetMusicVolume(music);AudioService.Instance.SetEffectsVolume(effects);}
-            lock(ExamAudioCapture.Gate){ExamAudioCapture.Stream?.Dispose();ExamAudioCapture.Stream=null;}
+            lock(ExamAudioCapture.Gate){ExamAudioCapture.Stream?.Dispose();ExamAudioCapture.Stream=null;ExamAudioCapture.Index?.Dispose();ExamAudioCapture.Index=null;}
             index?.Dispose();chapters?.Dispose();
             if(folder!=null)File.WriteAllText(Path.Combine(folder,"audio-format.txt"),AudioSettings.outputSampleRate+" "+ExamAudioCapture.Channels);
             if(render!=null){render.Release();Object.Destroy(render);}if(pixels!=null)Object.Destroy(pixels);

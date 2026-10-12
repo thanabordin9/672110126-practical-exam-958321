@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="11" result="Passed" total="11" passed="10" failed="0" inconclusive="0" skipped="1" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-12 14:37:27Z" end-time="2026-10-12 14:37:52Z" duration="24.658181">
+  <test-suite type="TestSuite" id="1021" name="Sky Islands" fullname="Sky Islands" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-12 14:37:27Z" end-time="2026-10-12 14:37:52Z" duration="24.658181" total="11" passed="10" failed="0" inconclusive="0" skipped="1" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1015" name="SkyIslands.PlayTests.dll" fullname="C:/Users/ASUS/.codex/worktrees/sky-islands/thai wea/SkyIslandsPractical/Library/ScriptAssemblies/SkyIslands.PlayTests.dll" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-12 14:37:27Z" end-time="2026-10-12 14:37:52Z" duration="24.641179" total="11" passed="10" failed="0" inconclusive="0" skipped="1" asserts="0">
+      <properties>
+        <property name="_PID" value="40812" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1016" name="SirikanyaKawilawan" fullname="SirikanyaKawilawan" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-12 14:37:27Z" end-time="2026-10-12 14:37:52Z" duration="24.639890" total="11" passed="10" failed="0" inconclusive="0" skipped="1" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1017" name="Tests" fullname="SirikanyaKawilawan.Tests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-12 14:37:27Z" end-time="2026-10-12 14:37:52Z" duration="24.639000" total="11" passed="10" failed="0" inconclusive="0" skipped="1" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="ExamEvidenceTests" fullname="SirikanyaKawilawan.Tests.ExamEvidenceTests" classname="SirikanyaKawilawan.Tests.ExamEvidenceTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-12 14:37:27Z" end-time="2026-10-12 14:37:27Z" duration="0.018046" total="1" passed="0" failed="0" inconclusive="0" skipped="1" asserts="0">
+            <properties />
+            <test-case id="1002" name="RecordExamEvidence" fullname="SirikanyaKawilawan.Tests.ExamEvidenceTests.RecordExamEvidence" methodname="RecordExamEvidence" classname="SirikanyaKawilawan.Tests.ExamEvidenceTests" runstate="Explicit" seed="1719093161" result="Skipped" label="Explicit" start-time="2026-10-12 14:37:27Z" end-time="2026-10-12 14:37:27Z" duration="0.001331" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="_SKIPREASON" value="Records an actual engine run for exam evidence; invoke by test filter only." />
+              </properties>
+              <reason>
+                <message><![CDATA[Records an actual engine run for exam evidence; invoke by test filter only.]]></message>
+              </reason>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1003" name="GameplayTests" fullname="SirikanyaKawilawan.Tests.GameplayTests" classname="SirikanyaKawilawan.Tests.GameplayTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-12 14:37:27Z" end-time="2026-10-12 14:37:27Z" duration="0.076646" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1004" name="CollisionItemsAreSingleUseAndStoppedAfterGameOver" fullname="SirikanyaKawilawan.Tests.GameplayTests.CollisionItemsAreSingleUseAndStoppedAfterGameOver" methodname="CollisionItemsAreSingleUseAndStoppedAfterGameOver" classname="SirikanyaKawilawan.Tests.GameplayTests" runstate="Runnable" seed="1722575852" result="Passed" start-time="2026-10-12 14:37:27Z" end-time="2026-10-12 14:37:27Z" duration="0.048082" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1005" name="InteractionRequiresExplicitActionAndOnlyOneConsumption" fullname="SirikanyaKawilawan.Tests.GameplayTests.InteractionRequiresExplicitActionAndOnlyOneConsumption" methodname="InteractionRequiresExplicitActionAndOnlyOneConsumption" classname="SirikanyaKawilawan.Tests.GameplayTests" runstate="Runnable" seed="1543141349" result="Passed" start-time="2026-10-12 14:37:27Z" end-time="2026-10-12 14:37:27Z" duration="0.003501" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1006" name="MusicMutePersistsAndDuplicateServiceDoesNotSurvive" fullname="SirikanyaKawilawan.Tests.GameplayTests.MusicMutePersistsAndDuplicateServiceDoesNotSurvive" methodname="MusicMutePersistsAndDuplicateServiceDoesNotSurvive" classname="SirikanyaKawilawan.Tests.GameplayTests" runstate="Runnable" seed="683814625" result="Passed" start-time="2026-10-12 14:37:27Z" end-time="2026-10-12 14:37:27Z" duration="0.014168" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1007" name="ScenePlayTests" fullname="SirikanyaKawilawan.Tests.ScenePlayTests" classname="SirikanyaKawilawan.Tests.ScenePlayTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-12 14:37:27Z" end-time="2026-10-12 14:37:52Z" duration="24.541628" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1009" name="CapsuleWalksAndCollectsAlongTheSkyRoute" fullname="SirikanyaKawilawan.Tests.ScenePlayTests.CapsuleWalksAndCollectsAlongTheSkyRoute" methodname="CapsuleWalksAndCollectsAlongTheSkyRoute" classname="SirikanyaKawilawan.Tests.ScenePlayTests" runstate="Runnable" seed="752941010" result="Passed" start-time="2026-10-12 14:37:27Z" end-time="2026-10-12 14:37:41Z" duration="13.942047" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1013" name="DirectStageTwoEntryRetriesTheSameStage" fullname="SirikanyaKawilawan.Tests.ScenePlayTests.DirectStageTwoEntryRetriesTheSameStage" methodname="DirectStageTwoEntryRetriesTheSameStage" classname="SirikanyaKawilawan.Tests.ScenePlayTests" runstate="Runnable" seed="455548945" result="Passed" start-time="2026-10-12 14:37:41Z" end-time="2026-10-12 14:37:42Z" duration="0.400638" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1014" name="HumanoidMovesAndECollectsWithoutCollisionPickup" fullname="SirikanyaKawilawan.Tests.ScenePlayTests.HumanoidMovesAndECollectsWithoutCollisionPickup" methodname="HumanoidMovesAndECollectsWithoutCollisionPickup" classname="SirikanyaKawilawan.Tests.ScenePlayTests" runstate="Runnable" seed="866156401" result="Passed" start-time="2026-10-12 14:37:42Z" end-time="2026-10-12 14:37:46Z" duration="4.172652" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1008" name="MenusOptionsResultsAndRetryConnectCorrectly" fullname="SirikanyaKawilawan.Tests.ScenePlayTests.MenusOptionsResultsAndRetryConnectCorrectly" methodname="MenusOptionsResultsAndRetryConnectCorrectly" classname="SirikanyaKawilawan.Tests.ScenePlayTests" runstate="Runnable" seed="1620331125" result="Passed" start-time="2026-10-12 14:37:46Z" end-time="2026-10-12 14:37:51Z" duration="5.137716" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1011" name="OptionsIsAdditiveAndPreservesMainMenuDraft" fullname="SirikanyaKawilawan.Tests.ScenePlayTests.OptionsIsAdditiveAndPreservesMainMenuDraft" methodname="OptionsIsAdditiveAndPreservesMainMenuDraft" classname="SirikanyaKawilawan.Tests.ScenePlayTests" runstate="Runnable" seed="521654940" result="Passed" start-time="2026-10-12 14:37:51Z" end-time="2026-10-12 14:37:51Z" duration="0.218755" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1012" name="StageBackReturnsToStageSelection" fullname="SirikanyaKawilawan.Tests.ScenePlayTests.StageBackReturnsToStageSelection" methodname="StageBackReturnsToStageSelection" classname="SirikanyaKawilawan.Tests.ScenePlayTests" runstate="Runnable" seed="885364727" result="Passed" start-time="2026-10-12 14:37:51Z" end-time="2026-10-12 14:37:51Z" duration="0.251283" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1010" name="StudentDetailsAreEditablePersistedAndShownOnCreditsAndSelection" fullname="SirikanyaKawilawan.Tests.ScenePlayTests.StudentDetailsAreEditablePersistedAndShownOnCreditsAndSelection" methodname="StudentDetailsAreEditablePersistedAndShownOnCreditsAndSelection" classname="SirikanyaKawilawan.Tests.ScenePlayTests" runstate="Runnable" seed="1456076653" result="Passed" start-time="2026-10-12 14:37:51Z" end-time="2026-10-12 14:37:52Z" duration="0.414652" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/ASUS/AppData/LocalLow/StudentGame/Sky Islands\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

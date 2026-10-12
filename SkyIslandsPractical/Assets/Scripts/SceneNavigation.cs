@@ -52,7 +52,7 @@ namespace SirikanyaKawilawan
             SceneManager.sceneLoaded -= OptionsLoaded; openingOptions = false;
             SceneManager.SetActiveScene(scene);
             foreach (var root in scene.GetRootGameObjects())
-                if (root.GetComponent<SceneScreen>() == null) root.SetActive(false);
+                if (root.GetComponent<SceneScreen>() == null && root.GetComponent<Canvas>() == null) root.SetActive(false);
         }
         public static void CloseOptions()
         {

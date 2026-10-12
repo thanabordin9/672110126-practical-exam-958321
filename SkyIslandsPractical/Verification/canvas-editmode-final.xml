@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="34" result="Passed" total="34" passed="34" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-12 14:34:28Z" end-time="2026-10-12 14:34:30Z" duration="2.6216205">
+  <test-suite type="TestSuite" id="1000" name="Sky Islands" fullname="Sky Islands" runstate="Runnable" testcasecount="34" result="Passed" start-time="2026-10-12 14:34:28Z" end-time="2026-10-12 14:34:30Z" duration="2.621621" total="34" passed="34" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1044" name="SkyIslands.EditTests.dll" fullname="C:/Users/ASUS/.codex/worktrees/sky-islands/thai wea/SkyIslandsPractical/Library/ScriptAssemblies/SkyIslands.EditTests.dll" runstate="Runnable" testcasecount="34" result="Passed" start-time="2026-10-12 14:34:28Z" end-time="2026-10-12 14:34:30Z" duration="2.600754" total="34" passed="34" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="3648" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1045" name="SirikanyaKawilawan" fullname="SirikanyaKawilawan" runstate="Runnable" testcasecount="34" result="Passed" start-time="2026-10-12 14:34:28Z" end-time="2026-10-12 14:34:30Z" duration="2.600025" total="34" passed="34" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1046" name="Tests" fullname="SirikanyaKawilawan.Tests" runstate="Runnable" testcasecount="34" result="Passed" start-time="2026-10-12 14:34:28Z" end-time="2026-10-12 14:34:30Z" duration="2.599673" total="34" passed="34" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="EditableCanvasTests" fullname="SirikanyaKawilawan.Tests.EditableCanvasTests" classname="SirikanyaKawilawan.Tests.EditableCanvasTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-12 14:34:28Z" end-time="2026-10-12 14:34:29Z" duration="1.063837" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="ParameterizedMethod" id="1010" name="SceneContainsEditableCanvasAndSavedButtonActions" fullname="SirikanyaKawilawan.Tests.EditableCanvasTests.SceneContainsEditableCanvasAndSavedButtonActions" classname="SirikanyaKawilawan.Tests.EditableCanvasTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-12 14:34:28Z" end-time="2026-10-12 14:34:29Z" duration="1.055784" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1002" name="SceneContainsEditableCanvasAndSavedButtonActions(&quot;MainMenu&quot;)" fullname="SirikanyaKawilawan.Tests.EditableCanvasTests.SceneContainsEditableCanvasAndSavedButtonActions(&quot;MainMenu&quot;)" methodname="SceneContainsEditableCanvasAndSavedButtonActions" classname="SirikanyaKawilawan.Tests.EditableCanvasTests" runstate="Runnable" seed="640912257" result="Passed" start-time="2026-10-12 14:34:28Z" end-time="2026-10-12 14:34:28Z" duration="0.239196" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1003" name="SceneContainsEditableCanvasAndSavedButtonActions(&quot;StageSelection&quot;)" fullname="SirikanyaKawilawan.Tests.EditableCanvasTests.SceneContainsEditableCanvasAndSavedButtonActions(&quot;StageSelection&quot;)" methodname="SceneContainsEditableCanvasAndSavedButtonActions" classname="SirikanyaKawilawan.Tests.EditableCanvasTests" runstate="Runnable" seed="1901705585" result="Passed" start-time="2026-10-12 14:34:28Z" end-time="2026-10-12 14:34:28Z" duration="0.087297" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1004" name="SceneContainsEditableCanvasAndSavedButtonActions(&quot;Options&quot;)" fullname="SirikanyaKawilawan.Tests.EditableCanvasTests.SceneContainsEditableCanvasAndSavedButtonActions(&quot;Options&quot;)" methodname="SceneContainsEditableCanvasAndSavedButtonActions" classname="SirikanyaKawilawan.Tests.EditableCanvasTests" runstate="Runnable" seed="655639573" result="Passed" start-time="2026-10-12 14:34:28Z" end-time="2026-10-12 14:34:28Z" duration="0.085385" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1005" name="SceneContainsEditableCanvasAndSavedButtonActions(&quot;Credits&quot;)" fullname="SirikanyaKawilawan.Tests.EditableCanvasTests.SceneContainsEditableCanvasAndSavedButtonActions(&quot;Credits&quot;)" methodname="SceneContainsEditableCanvasAndSavedButtonActions" classname="SirikanyaKawilawan.Tests.EditableCanvasTests" runstate="Runnable" seed="837428608" result="Passed" start-time="2026-10-12 14:34:28Z" end-time="2026-10-12 14:34:28Z" duration="0.076629" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1006" name="SceneContainsEditableCanvasAndSavedButtonActions(&quot;Stage1&quot;)" fullname="SirikanyaKawilawan.Tests.EditableCanvasTests.SceneContainsEditableCanvasAndSavedButtonActions(&quot;Stage1&quot;)" methodname="SceneContainsEditableCanvasAndSavedButtonActions" classname="SirikanyaKawilawan.Tests.EditableCanvasTests" runstate="Runnable" seed="649286843" result="Passed" start-time="2026-10-12 14:34:28Z" end-time="2026-10-12 14:34:28Z" duration="0.267719" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1007" name="SceneContainsEditableCanvasAndSavedButtonActions(&quot;Stage2&quot;)" fullname="SirikanyaKawilawan.Tests.EditableCanvasTests.SceneContainsEditableCanvasAndSavedButtonActions(&quot;Stage2&quot;)" methodname="SceneContainsEditableCanvasAndSavedButtonActions" classname="SirikanyaKawilawan.Tests.EditableCanvasTests" runstate="Runnable" seed="1192959360" result="Passed" start-time="2026-10-12 14:34:28Z" end-time="2026-10-12 14:34:29Z" duration="0.119863" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1008" name="SceneContainsEditableCanvasAndSavedButtonActions(&quot;Win&quot;)" fullname="SirikanyaKawilawan.Tests.EditableCanvasTests.SceneContainsEditableCanvasAndSavedButtonActions(&quot;Win&quot;)" methodname="SceneContainsEditableCanvasAndSavedButtonActions" classname="SirikanyaKawilawan.Tests.EditableCanvasTests" runstate="Runnable" seed="928627351" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.075736" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1009" name="SceneContainsEditableCanvasAndSavedButtonActions(&quot;GameOver&quot;)" fullname="SirikanyaKawilawan.Tests.EditableCanvasTests.SceneContainsEditableCanvasAndSavedButtonActions(&quot;GameOver&quot;)" methodname="SceneContainsEditableCanvasAndSavedButtonActions" classname="SirikanyaKawilawan.Tests.EditableCanvasTests" runstate="Runnable" seed="4853182" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.080862" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+          <test-suite type="TestFixture" id="1011" name="RunStateTests" fullname="SirikanyaKawilawan.Tests.RunStateTests" classname="SirikanyaKawilawan.Tests.RunStateTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.082327" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1021" name="FallingLosesRegardlessOfScore" fullname="SirikanyaKawilawan.Tests.RunStateTests.FallingLosesRegardlessOfScore" methodname="FallingLosesRegardlessOfScore" classname="SirikanyaKawilawan.Tests.RunStateTests" runstate="Runnable" seed="1111978639" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.006794" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1024" name="InvalidDeltaDoesNotCorruptRun" fullname="SirikanyaKawilawan.Tests.RunStateTests.InvalidDeltaDoesNotCorruptRun" methodname="InvalidDeltaDoesNotCorruptRun" classname="SirikanyaKawilawan.Tests.RunStateTests" runstate="Runnable" seed="750640959" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.002650" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1017" name="ItemUsesSpecifiedEffect" fullname="SirikanyaKawilawan.Tests.RunStateTests.ItemUsesSpecifiedEffect" classname="SirikanyaKawilawan.Tests.RunStateTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.003814" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1013" name="ItemUsesSpecifiedEffect(&quot;TimeBonus&quot;,33.0f,0)" fullname="SirikanyaKawilawan.Tests.RunStateTests.ItemUsesSpecifiedEffect(&quot;TimeBonus&quot;,33.0f,0)" methodname="ItemUsesSpecifiedEffect" classname="SirikanyaKawilawan.Tests.RunStateTests" runstate="Runnable" seed="1230776531" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.001325" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1014" name="ItemUsesSpecifiedEffect(&quot;TimePenalty&quot;,25.0f,0)" fullname="SirikanyaKawilawan.Tests.RunStateTests.ItemUsesSpecifiedEffect(&quot;TimePenalty&quot;,25.0f,0)" methodname="ItemUsesSpecifiedEffect" classname="SirikanyaKawilawan.Tests.RunStateTests" runstate="Runnable" seed="1940580728" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.000318" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1015" name="ItemUsesSpecifiedEffect(&quot;ScoreBonus&quot;,30.0f,500)" fullname="SirikanyaKawilawan.Tests.RunStateTests.ItemUsesSpecifiedEffect(&quot;ScoreBonus&quot;,30.0f,500)" methodname="ItemUsesSpecifiedEffect" classname="SirikanyaKawilawan.Tests.RunStateTests" runstate="Runnable" seed="863774911" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.000273" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1016" name="ItemUsesSpecifiedEffect(&quot;ScorePenalty&quot;,30.0f,-500)" fullname="SirikanyaKawilawan.Tests.RunStateTests.ItemUsesSpecifiedEffect(&quot;ScorePenalty&quot;,30.0f,-500)" methodname="ItemUsesSpecifiedEffect" classname="SirikanyaKawilawan.Tests.RunStateTests" runstate="Runnable" seed="345650238" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.000409" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1023" name="ResetRestoresAllRunValues" fullname="SirikanyaKawilawan.Tests.RunStateTests.ResetRestoresAllRunValues" methodname="ResetRestoresAllRunValues" classname="SirikanyaKawilawan.Tests.RunStateTests" runstate="Runnable" seed="1359506031" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.000797" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1012" name="StartsWithThirtySecondsAndZeroScore" fullname="SirikanyaKawilawan.Tests.RunStateTests.StartsWithThirtySecondsAndZeroScore" methodname="StartsWithThirtySecondsAndZeroScore" classname="SirikanyaKawilawan.Tests.RunStateTests" runstate="Runnable" seed="1922286389" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.000455" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1020" name="TimeoutUsesStrictScoreThreshold" fullname="SirikanyaKawilawan.Tests.RunStateTests.TimeoutUsesStrictScoreThreshold" classname="SirikanyaKawilawan.Tests.RunStateTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.002132" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1018" name="TimeoutUsesStrictScoreThreshold(20,&quot;Lost&quot;)" fullname="SirikanyaKawilawan.Tests.RunStateTests.TimeoutUsesStrictScoreThreshold(20,&quot;Lost&quot;)" methodname="TimeoutUsesStrictScoreThreshold" classname="SirikanyaKawilawan.Tests.RunStateTests" runstate="Runnable" seed="1895301520" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.000926" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1019" name="TimeoutUsesStrictScoreThreshold(21,&quot;Won&quot;)" fullname="SirikanyaKawilawan.Tests.RunStateTests.TimeoutUsesStrictScoreThreshold(21,&quot;Won&quot;)" methodname="TimeoutUsesStrictScoreThreshold" classname="SirikanyaKawilawan.Tests.RunStateTests" runstate="Runnable" seed="1958276316" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.000439" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1022" name="TimePenaltyCanEndRunAndLaterItemsAreIgnored" fullname="SirikanyaKawilawan.Tests.RunStateTests.TimePenaltyCanEndRunAndLaterItemsAreIgnored" methodname="TimePenaltyCanEndRunAndLaterItemsAreIgnored" classname="SirikanyaKawilawan.Tests.RunStateTests" runstate="Runnable" seed="741000091" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.000539" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1025" name="SceneConfigurationTests" fullname="SirikanyaKawilawan.Tests.SceneConfigurationTests" classname="SirikanyaKawilawan.Tests.SceneConfigurationTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:30Z" duration="1.395021" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1038" name="HumanoidStageUsesStarterAssetsAndValidAvatar" fullname="SirikanyaKawilawan.Tests.SceneConfigurationTests.HumanoidStageUsesStarterAssetsAndValidAvatar" methodname="HumanoidStageUsesStarterAssetsAndValidAvatar" classname="SirikanyaKawilawan.Tests.SceneConfigurationTests" runstate="Runnable" seed="916181046" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.131115" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1039" name="HumanoidUsesProvidedCharacterTextures" fullname="SirikanyaKawilawan.Tests.SceneConfigurationTests.HumanoidUsesProvidedCharacterTextures" methodname="HumanoidUsesProvidedCharacterTextures" classname="SirikanyaKawilawan.Tests.SceneConfigurationTests" runstate="Runnable" seed="219244885" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.202743" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1034" name="SceneIsRegisteredAndContainsCameraAndMusic" fullname="SirikanyaKawilawan.Tests.SceneConfigurationTests.SceneIsRegisteredAndContainsCameraAndMusic" classname="SirikanyaKawilawan.Tests.SceneConfigurationTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:30Z" duration="0.811544" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1026" name="SceneIsRegisteredAndContainsCameraAndMusic(&quot;MainMenu&quot;)" fullname="SirikanyaKawilawan.Tests.SceneConfigurationTests.SceneIsRegisteredAndContainsCameraAndMusic(&quot;MainMenu&quot;)" methodname="SceneIsRegisteredAndContainsCameraAndMusic" classname="SirikanyaKawilawan.Tests.SceneConfigurationTests" runstate="Runnable" seed="1497589584" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.095729" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1027" name="SceneIsRegisteredAndContainsCameraAndMusic(&quot;StageSelection&quot;)" fullname="SirikanyaKawilawan.Tests.SceneConfigurationTests.SceneIsRegisteredAndContainsCameraAndMusic(&quot;StageSelection&quot;)" methodname="SceneIsRegisteredAndContainsCameraAndMusic" classname="SirikanyaKawilawan.Tests.SceneConfigurationTests" runstate="Runnable" seed="1146979214" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.091618" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1028" name="SceneIsRegisteredAndContainsCameraAndMusic(&quot;Options&quot;)" fullname="SirikanyaKawilawan.Tests.SceneConfigurationTests.SceneIsRegisteredAndContainsCameraAndMusic(&quot;Options&quot;)" methodname="SceneIsRegisteredAndContainsCameraAndMusic" classname="SirikanyaKawilawan.Tests.SceneConfigurationTests" runstate="Runnable" seed="1018040722" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.087490" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1029" name="SceneIsRegisteredAndContainsCameraAndMusic(&quot;Credits&quot;)" fullname="SirikanyaKawilawan.Tests.SceneConfigurationTests.SceneIsRegisteredAndContainsCameraAndMusic(&quot;Credits&quot;)" methodname="SceneIsRegisteredAndContainsCameraAndMusic" classname="SirikanyaKawilawan.Tests.SceneConfigurationTests" runstate="Runnable" seed="1650390602" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:29Z" duration="0.099687" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1030" name="SceneIsRegisteredAndContainsCameraAndMusic(&quot;Stage1&quot;)" fullname="SirikanyaKawilawan.Tests.SceneConfigurationTests.SceneIsRegisteredAndContainsCameraAndMusic(&quot;Stage1&quot;)" methodname="SceneIsRegisteredAndContainsCameraAndMusic" classname="SirikanyaKawilawan.Tests.SceneConfigurationTests" runstate="Runnable" seed="1445538866" result="Passed" start-time="2026-10-12 14:34:29Z" end-time="2026-10-12 14:34:30Z" duration="0.142401" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1031" name="SceneIsRegisteredAndContainsCameraAndMusic(&quot;Stage2&quot;)" fullname="SirikanyaKawilawan.Tests.SceneConfigurationTests.SceneIsRegisteredAndContainsCameraAndMusic(&quot;Stage2&quot;)" methodname="SceneIsRegisteredAndContainsCameraAndMusic" classname="SirikanyaKawilawan.Tests.SceneConfigurationTests" runstate="Runnable" seed="591160729" result="Passed" start-time="2026-10-12 14:34:30Z" end-time="2026-10-12 14:34:30Z" duration="0.105212" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1032" name="SceneIsRegisteredAndContainsCameraAndMusic(&quot;Win&quot;)" fullname="SirikanyaKawilawan.Tests.SceneConfigurationTests.SceneIsRegisteredAndContainsCameraAndMusic(&quot;Win&quot;)" methodname="SceneIsRegisteredAndContainsCameraAndMusic" classname="SirikanyaKawilawan.Tests.SceneConfigurationTests" runstate="Runnable" seed="1747467797" result="Passed" start-time="2026-10-12 14:34:30Z" end-time="2026-10-12 14:34:30Z" duration="0.094686" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1033" name="SceneIsRegisteredAndContainsCameraAndMusic(&quot;GameOver&quot;)" fullname="SirikanyaKawilawan.Tests.SceneConfigurationTests.SceneIsRegisteredAndContainsCameraAndMusic(&quot;GameOver&quot;)" methodname="SceneIsRegisteredAndContainsCameraAndMusic" classname="SirikanyaKawilawan.Tests.SceneConfigurationTests" runstate="Runnable" seed="466702106" result="Passed" start-time="2026-10-12 14:34:30Z" end-time="2026-10-12 14:34:30Z" duration="0.088902" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="ParameterizedMethod" id="1037" name="StageUsesProBuilderAndEnoughPositiveScorePrefabs" fullname="SirikanyaKawilawan.Tests.SceneConfigurationTests.StageUsesProBuilderAndEnoughPositiveScorePrefabs" classname="SirikanyaKawilawan.Tests.SceneConfigurationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-12 14:34:30Z" end-time="2026-10-12 14:34:30Z" duration="0.247596" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1035" name="StageUsesProBuilderAndEnoughPositiveScorePrefabs(&quot;Stage1&quot;)" fullname="SirikanyaKawilawan.Tests.SceneConfigurationTests.StageUsesProBuilderAndEnoughPositiveScorePrefabs(&quot;Stage1&quot;)" methodname="StageUsesProBuilderAndEnoughPositiveScorePrefabs" classname="SirikanyaKawilawan.Tests.SceneConfigurationTests" runstate="Runnable" seed="1377257907" result="Passed" start-time="2026-10-12 14:34:30Z" end-time="2026-10-12 14:34:30Z" duration="0.127531" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1036" name="StageUsesProBuilderAndEnoughPositiveScorePrefabs(&quot;Stage2&quot;)" fullname="SirikanyaKawilawan.Tests.SceneConfigurationTests.StageUsesProBuilderAndEnoughPositiveScorePrefabs(&quot;Stage2&quot;)" methodname="StageUsesProBuilderAndEnoughPositiveScorePrefabs" classname="SirikanyaKawilawan.Tests.SceneConfigurationTests" runstate="Runnable" seed="213502753" result="Passed" start-time="2026-10-12 14:34:30Z" end-time="2026-10-12 14:34:30Z" duration="0.117160" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+          <test-suite type="TestFixture" id="1040" name="StudentProfileTests" fullname="SirikanyaKawilawan.Tests.StudentProfileTests" classname="SirikanyaKawilawan.Tests.StudentProfileTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-12 14:34:30Z" end-time="2026-10-12 14:34:30Z" duration="0.056532" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1042" name="InvalidDetailsDoNotOverwriteSavedIdentity" fullname="SirikanyaKawilawan.Tests.StudentProfileTests.InvalidDetailsDoNotOverwriteSavedIdentity" methodname="InvalidDetailsDoNotOverwriteSavedIdentity" classname="SirikanyaKawilawan.Tests.StudentProfileTests" runstate="Runnable" seed="1064137806" result="Passed" start-time="2026-10-12 14:34:30Z" end-time="2026-10-12 14:34:30Z" duration="0.021426" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1041" name="SavedStudentDetailsPersistAndProvideEnglishNamespace" fullname="SirikanyaKawilawan.Tests.StudentProfileTests.SavedStudentDetailsPersistAndProvideEnglishNamespace" methodname="SavedStudentDetailsPersistAndProvideEnglishNamespace" classname="SirikanyaKawilawan.Tests.StudentProfileTests" runstate="Runnable" seed="1458187212" result="Passed" start-time="2026-10-12 14:34:30Z" end-time="2026-10-12 14:34:30Z" duration="0.022390" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1043" name="SharedIdentityFileOverridesStalePlayerPreferences" fullname="SirikanyaKawilawan.Tests.StudentProfileTests.SharedIdentityFileOverridesStalePlayerPreferences" methodname="SharedIdentityFileOverridesStalePlayerPreferences" classname="SirikanyaKawilawan.Tests.StudentProfileTests" runstate="Runnable" seed="907544451" result="Passed" start-time="2026-10-12 14:34:30Z" end-time="2026-10-12 14:34:30Z" duration="0.008447" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/ASUS/AppData/LocalLow/StudentGame/Sky Islands\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

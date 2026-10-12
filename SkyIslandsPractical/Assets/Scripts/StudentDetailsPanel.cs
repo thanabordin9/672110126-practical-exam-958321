@@ -7,7 +7,10 @@ namespace SirikanyaKawilawan
     public static class StudentDetailsPanel
     {
         static Font studentFont;
-        public static Font StudentFont => studentFont == null ? studentFont = Font.CreateDynamicFontFromOSFont(new[] { "Tahoma", "Arial" }, 24) : studentFont;
+        public static Font StudentFont
+        {
+            get { if(studentFont==null){studentFont=Resources.Load<Font>("StudentFont");if(studentFont==null)studentFont=Font.CreateDynamicFontFromOSFont(new[]{"Tahoma","Arial"},24);}return studentFont; }
+        }
         public static Text IdentityText(Transform parent, string name, string value, float x, float y, float width, float height, int size)
         {
             var text = UiKit.Text(parent, name, value, x, y, width, height, size, UiKit.Muted); text.font = StudentFont; text.supportRichText = false; return text;

@@ -23,7 +23,7 @@ Unity เวอร์ชันนี้จัดหา Cinemachine 6.6.0, Unity 
 ## โครงสร้าง
 - Assets/Scenes: MainMenu, StageSelection, Options, Credits, Stage1, Stage2, Win, GameOver
 - Assets/Prefabs: TimePlus3, TimeMinus5, ScorePlus500, ScoreMinus500, RockObstacle
-- Assets/Scripts: namespace StudentGame; กติกาเกม UI ระบบเสียง การชน และ Interaction
+- Assets/Scripts: namespace SirikanyaKawilawan; กติกาเกม UI ระบบเสียง การชน และ Interaction
 - Assets/Editor/ProjectBuilder.cs: สร้างฉากจาก ProBuilder และตั้งค่าตัวละคร
 - Assets/StarterAssets: คอนโทรลเลอร์และ locomotion ของ Unity Technologies พร้อมที่มาและใบอนุญาต
 - Assets/ExamResources: ตัวละคร Ch02, animation และเสียงที่ให้มา
@@ -33,11 +33,18 @@ Unity เวอร์ชันนี้จัดหา Cinemachine 6.6.0, Unity 
 ตัวละครด่าน 2 ใช้ ThirdPersonController, StarterAssetsInputs, PlayerInput, CharacterController, Animator แบบ Humanoid และ Cinemachine Follow กล้องตามตำแหน่งแบบมุมคงที่ การวางพื้นและสะพานใช้ ProBuilderMesh จริง สามารถเปิดแก้ด้วย ProBuilder ได้ พื้นหลักด่าน 2 มีขนาด 12 × 12 เมตร (144 ตารางเมตร)
 
 ## ก่อนส่งงาน
-หน้า MainMenu มีช่องกรอกชื่อ–นามสกุล ชื่อภาษาอังกฤษ รหัสนักศึกษา และ Section กด Save Student Details เพื่อบันทึกบนเครื่องและแสดงบน MainMenu, StageSelection และ Credits ไม่มีข้อมูลจริงในเอกสารแนบ จึงไม่กรอกข้อมูลตัวอย่างแทนคุณ
+ข้อมูลนักศึกษา: สิริกัญญา กาวิลาวรรณ / Sirikanya Kawilawan / 672110126 / Section 001 ข้อมูลเริ่มต้นบันทึกใน Assets/Resources/StudentProfile.asset และ source ที่พัฒนาเองอยู่ใน namespace SirikanyaKawilawan
 
-ก่อนส่ง source เปิด Unity เมนู **Sky Islands > Student Details and Namespace** ใส่ข้อมูลจริงแล้วกด Save details and apply namespace เครื่องมือนี้บันทึกข้อมูลเริ่มต้นลงโปรเจกต์และเปลี่ยน namespace ของโค้ดที่พัฒนาเองตามชื่อภาษาอังกฤษ รอ compile แล้ว Build ใหม่ namespace ปัจจุบันคือ **StudentGame ชั่วคราว** และไม่เปลี่ยน StarterAssets
+GitHub: https://github.com/thanabordin9/672110126-practical-exam-958321
 
-โปรเจกต์ยังไม่มี public Git repository URL หรือวิดีโอส่งงาน ดู EvidenceChecklist.md เพื่อบันทึกหลักฐานจริง ใช้ commit history จริงเท่านั้น ไม่สามารถสร้างหลักฐานการทำงานย้อนหลังให้ครอบคลุมวันก่อนเริ่มงานได้
+คำตอบและคลิปอยู่ในโฟลเดอร์ Submission ที่ root ของ repository ประวัติ Git ใช้วันเวลาจริง เริ่มวันที่ 12 ตุลาคม 2026 จึงไม่สามารถรับรองเงื่อนไข commit/push ย้อนหลังครบทุกวันตลอดช่วงสอบได้
+
+## แก้ UI ใน Unity Editor
+ทุกฉากมี Game UI เป็น Canvas พร้อม CanvasScaler และ GraphicRaycaster ตั้งแต่ก่อนกด Play ขยาย Game UI ใน Hierarchy เพื่อเลือกปุ่ม Text Slider หรือ InputField แล้วแก้ RectTransform สีและข้อความใน Inspector
+
+Prefab อยู่ใน Assets/Prefabs/UI มี 8 ไฟล์ตามชื่อฉาก ปุ่มมี On Click ที่บันทึกจริง เรียก SceneButtonAction.Invoke; เปลี่ยน Command, Target Scene และ Stage ในคอมโพเนนต์ของปุ่มเพื่อแก้เส้นทาง ปุ่ม Save ใช้ StudentForm.Save และ Slider ใช้ VolumeControlBinding.Apply
+
+GameHud เก็บ reference ของเวลา คะแนน แถบความคืบหน้าและข้อความในฉาก ระบบอัปเดตเฉพาะค่าระหว่างเล่น ไม่สร้าง Canvas ทับงานที่แก้ไว้ เมนู Sky Islands > Create Editable Canvas UI ใช้เตรียม UI ใหม่เมื่อฉากยังไม่มี Canvas ควรบันทึกและสำรองฉากก่อนใช้เครื่องมือสร้างฉาก
 
 ## แหล่งทรัพยากร
 ไฟล์ตัวละคร/animation/เสียง: PracticalExamResources.zip ที่ผู้ใช้ให้มา

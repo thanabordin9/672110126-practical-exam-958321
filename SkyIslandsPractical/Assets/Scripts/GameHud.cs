@@ -7,12 +7,19 @@ namespace SirikanyaKawilawan
     {
         public RunController run;
         public PlayerInteraction interaction;
-        Text timer, score, ready, prompt, feedback;
-        Image progress, readyPanel, promptPanel, feedbackPanel;
+        public RectTransform uiCanvas;
+        [SerializeField] Text timer, score, ready, prompt, feedback;
+        [SerializeField] Image progress, readyPanel, promptPanel, feedbackPanel;
         float feedbackUntil;
         void Start()
         {
+            if(uiCanvas==null)CreateCanvas();
+            run.ItemCollected += ShowFeedback;
+        }
+        public void CreateCanvas()
+        {
             var canvas = UiKit.Canvas();
+            uiCanvas=canvas;
             var timePanel = UiKit.Panel(canvas, "Countdown Card", 28, 26, 360, 145, UiKit.Ink);
             UiKit.Text(timePanel.transform, "Scene Label", run.stage == 1 ? "STAGE 1 / CAPSULE PLAYER" : "STAGE 2 / HUMANOID PLAYER", 22, 15, 325, 30, 18, UiKit.Muted, true);
             timer = UiKit.Text(timePanel.transform, "Time Remaining", "30.0", 22, 43, 310, 78, 60, Color.white, true);
@@ -23,7 +30,8 @@ namespace SirikanyaKawilawan
             UiKit.Text(scorePanel.transform, "Goal", "WIN AT TIMEOUT: MORE THAN 10,000", 22, 115, 330, 25, 14, UiKit.Accent);
             UiKit.Panel(canvas, "Progress Track", 1200, 177, 372, 6, new Color(0.1f, 0.24f, 0.28f));
             progress = UiKit.Panel(canvas, "Score Progress", 1200, 177, 1, 6, UiKit.Accent);
-            UiKit.Button(canvas, "Back to Stage Selection", 640, 28, 320, () => SceneNavigation.Load("StageSelection"));
+            var back=UiKit.Button(canvas, "Back to Stage Selection", 640, 28, 320, () => SceneNavigation.Load("StageSelection"));
+            var action=back.gameObject.AddComponent<SceneButtonAction>();action.targetScene="StageSelection";
             var controls = UiKit.Panel(canvas, "Controls", 28, 802, 720, 70, UiKit.Ink);
             UiKit.Text(controls.transform, "Controls Text", run.stage == 1 ? "WASD  MOVE    SHIFT  SPRINT    SPACE  JUMP    ESC  MENU" : "WASD  MOVE    SHIFT  SPRINT    SPACE  JUMP    E  COLLECT", 18, 0, 690, 70, 18, Color.white);
             var legend = UiKit.Panel(canvas, "Item Legend", 1010, 750, 562, 122, UiKit.Ink);
@@ -36,7 +44,7 @@ namespace SirikanyaKawilawan
             feedbackPanel = UiKit.Panel(canvas, "Feedback Background", 560, 190, 480, 65, UiKit.Ink);
             feedback = UiKit.Text(canvas, "Pickup Feedback", "", 560, 190, 480, 65, 32, UiKit.Accent, true); feedback.alignment = TextAnchor.MiddleCenter;
             promptPanel.gameObject.SetActive(false); feedbackPanel.gameObject.SetActive(false);
-            run.ItemCollected += ShowFeedback;
+            if(!Application.isPlaying)readyPanel.gameObject.SetActive(false);
         }
         void ShowFeedback(string value) { feedback.text = value; feedbackUntil = Time.time + 1.0f; }
         void Update()
