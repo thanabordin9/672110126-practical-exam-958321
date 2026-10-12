@@ -4,7 +4,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.UI;
 
-namespace StudentGame
+namespace SirikanyaKawilawan
 {
     public static class UiKit
     {

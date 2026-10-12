@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.ProBuilder;
 using StarterAssets;
 
-namespace StudentGame.Tests
+namespace SirikanyaKawilawan.Tests
 {
     public class SceneConfigurationTests
     {

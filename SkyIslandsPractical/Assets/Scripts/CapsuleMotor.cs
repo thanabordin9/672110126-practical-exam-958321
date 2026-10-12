@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace StudentGame
+namespace SirikanyaKawilawan
 {
     [RequireComponent(typeof(CharacterController))]
     public sealed class CapsuleMotor : MonoBehaviour

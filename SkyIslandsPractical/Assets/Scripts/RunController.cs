@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace StudentGame
+namespace SirikanyaKawilawan
 {
     public sealed class RunController : MonoBehaviour
     {

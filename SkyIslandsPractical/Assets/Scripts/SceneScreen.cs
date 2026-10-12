@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace StudentGame
+namespace SirikanyaKawilawan
 {
     public sealed class SceneScreen : MonoBehaviour
     {

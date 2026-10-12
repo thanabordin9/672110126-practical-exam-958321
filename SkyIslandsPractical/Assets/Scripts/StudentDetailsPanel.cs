@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace StudentGame
+namespace SirikanyaKawilawan
 {
     public static class StudentDetailsPanel
     {

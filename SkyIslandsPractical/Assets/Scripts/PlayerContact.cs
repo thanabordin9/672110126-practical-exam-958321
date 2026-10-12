@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace StudentGame
+namespace SirikanyaKawilawan
 {
     public sealed class PlayerContact : MonoBehaviour
     {

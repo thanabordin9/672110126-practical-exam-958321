@@ -2,7 +2,7 @@ using System.IO;
 using UnityEngine;
 using UnityEditor;
 
-namespace StudentGame.Editor
+namespace SirikanyaKawilawan.Editor
 {
     public sealed class StudentSetup : EditorWindow
     {

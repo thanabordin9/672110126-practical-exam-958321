@@ -11,9 +11,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b92e3a141ab78554b95b35e8d7cc7272, type: 3}
   m_Name: StudentProfile
-  m_EditorClassIdentifier: StudentGame::StudentGame.StudentProfileAsset
+  m_EditorClassIdentifier: StudentGame::SirikanyaKawilawan.StudentProfileAsset
   data:
-    displayName: 
-    englishName: 
-    studentCode: 
-    section: 
+    displayName: "สิริกัญญา กาวิลาวรรณ"
+    englishName: "Sirikanya Kawilawan"
+    studentCode: "672110126"
+    section: ""

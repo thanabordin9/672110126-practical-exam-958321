@@ -1,7 +1,7 @@
 using UnityEngine;
 using StarterAssets;
 
-namespace StudentGame
+namespace SirikanyaKawilawan
 {
     [DefaultExecutionOrder(-100)]
     public sealed class StarterRunGate : MonoBehaviour

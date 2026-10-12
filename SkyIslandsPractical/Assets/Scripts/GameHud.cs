@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace StudentGame
+namespace SirikanyaKawilawan
 {
     public sealed class GameHud : MonoBehaviour
     {

@@ -5,13 +5,13 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-namespace StudentGame.Tests
+namespace SirikanyaKawilawan.Tests
 {
     public class GameplayTests
     {
         static Type TypeOf(string name)
         {
-            var t=Type.GetType("StudentGame."+name+", StudentGame");
+            var t=Type.GetType("SirikanyaKawilawan."+name+", StudentGame");
             Assert.That(t,Is.Not.Null,name+" gameplay component is missing"); return t;
         }
         static object Prop(object o,string n)=>o.GetType().GetProperty(n).GetValue(o);

@@ -10,7 +10,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
 using StarterAssets;
 
-namespace StudentGame.Tests
+namespace SirikanyaKawilawan.Tests
 {
     public class ScenePlayTests
     {

@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using NUnit.Framework;
 
-namespace StudentGame.Tests
+namespace SirikanyaKawilawan.Tests
 {
     public class RunStateTests
     {
@@ -10,13 +10,13 @@ namespace StudentGame.Tests
         object state;
         [SetUp] public void Setup()
         {
-            stateType = Type.GetType("StudentGame.RunState, StudentGame") ?? Type.GetType("StudentGame.RunState, StudentGame.Rules");
+            stateType = Type.GetType("SirikanyaKawilawan.RunState, StudentGame") ?? Type.GetType("SirikanyaKawilawan.RunState, StudentGame.Rules");
             Assert.That(stateType, Is.Not.Null, "The shared run model has not been implemented.");
             state = Activator.CreateInstance(stateType);
         }
         object Get(string name) => stateType.GetProperty(name).GetValue(state);
         void Call(string name, params object[] args) => stateType.GetMethod(name).Invoke(state, args);
-        void Apply(string kind) => Call("Apply", Enum.Parse(stateType.Assembly.GetType("StudentGame.ItemKind"), kind));
+        void Apply(string kind) => Call("Apply", Enum.Parse(stateType.Assembly.GetType("SirikanyaKawilawan.ItemKind"), kind));
         [Test] public void StartsWithThirtySecondsAndZeroScore() { Assert.That(Get("Remaining"), Is.EqualTo(30f)); Assert.That(Get("Score"), Is.EqualTo(0)); }
         [TestCase("TimeBonus",33f,0)] [TestCase("TimePenalty",25f,0)]
         [TestCase("ScoreBonus",30f,500)] [TestCase("ScorePenalty",30f,-500)]

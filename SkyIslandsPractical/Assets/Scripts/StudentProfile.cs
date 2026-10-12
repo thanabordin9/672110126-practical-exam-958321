@@ -3,7 +3,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using UnityEngine;
 
-namespace StudentGame
+namespace SirikanyaKawilawan
 {
     public static class StudentProfile
     {

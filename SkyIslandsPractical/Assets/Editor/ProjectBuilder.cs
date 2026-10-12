@@ -13,7 +13,7 @@ using Unity.Cinemachine.TargetTracking;
 using StarterAssets;
 using Object = UnityEngine.Object;
 
-namespace StudentGame.Editor
+namespace SirikanyaKawilawan.Editor
 {
     public static class ProjectBuilder
     {

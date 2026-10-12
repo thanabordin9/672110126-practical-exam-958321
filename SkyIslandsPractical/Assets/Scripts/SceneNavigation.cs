@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
-namespace StudentGame
+namespace SirikanyaKawilawan
 {
     public static class SceneNavigation
     {

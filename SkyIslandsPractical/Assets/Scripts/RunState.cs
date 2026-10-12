@@ -1,6 +1,6 @@
 using System;
 
-namespace StudentGame
+namespace SirikanyaKawilawan
 {
     public enum ItemKind { TimeBonus, TimePenalty, ScoreBonus, ScorePenalty }
     public enum RunOutcome { Playing, Won, Lost }

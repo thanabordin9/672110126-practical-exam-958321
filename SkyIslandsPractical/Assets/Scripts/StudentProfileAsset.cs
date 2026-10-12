@@ -1,5 +1,5 @@
 using UnityEngine;
-namespace StudentGame
+namespace SirikanyaKawilawan
 {
     [CreateAssetMenu(menuName = "Sky Islands/Student Profile")]
     public sealed class StudentProfileAsset : ScriptableObject

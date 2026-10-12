@@ -4,7 +4,7 @@ using System.Linq;
 using NUnit.Framework;
 using UnityEngine;
 
-namespace StudentGame.Tests
+namespace SirikanyaKawilawan.Tests
 {
     public class StudentProfileTests
     {
@@ -15,7 +15,7 @@ namespace StudentGame.Tests
         string file,backup;
         [SetUp] public void Setup()
         {
-            type=Type.GetType("StudentGame.StudentProfile, StudentGame");
+            type=Type.GetType("SirikanyaKawilawan.StudentProfile, StudentGame");
             Assert.That(type,Is.Not.Null,"Student name/code storage has not been implemented.");
             old=keys.Select(k=>PlayerPrefs.GetString(k)).ToArray();existed=keys.Select(PlayerPrefs.HasKey).ToArray();
             file=(string)type.GetProperty("FilePath").GetValue(null);backup=File.Exists(file)?File.ReadAllText(file):null;

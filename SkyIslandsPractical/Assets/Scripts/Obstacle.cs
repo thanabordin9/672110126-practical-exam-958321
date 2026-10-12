@@ -1,2 +1,2 @@
 using UnityEngine;
-namespace StudentGame { public sealed class Obstacle : MonoBehaviour { } }
+namespace SirikanyaKawilawan { public sealed class Obstacle : MonoBehaviour { } }
