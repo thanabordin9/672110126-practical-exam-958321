@@ -23,7 +23,7 @@
 
 - Physical speaker output quality depends on the user's audio device; audio source, clip and volume wiring is implemented and tested at software level.
 - Full manual Stage2 win playthrough has not been recorded; Humanoid movement, E collection and shared win/loss boundary rules are verified separately.
-- Windows executable/build result is recorded separately in build.txt after build completion.
+- Windows build succeeded with 0 errors (139,034,451 bytes). The compiled executable initialized its main scene and remained running for 20 seconds in a headless smoke test with no exception/error log; actual scene graphics were inspected through PlayMode renders. See build.txt and player-startup-final.log.
 - Final appearance checked by the author through rendered screenshots, separately from the static reviewer.
 
 ## Submission data still needed
