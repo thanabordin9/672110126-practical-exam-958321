@@ -1,0 +1,1 @@
+{"name":"SkyIslands.Editor","references":["StudentGame","StarterAssets","Unity.ProBuilder","Unity.InputSystem","Unity.Cinemachine","Unity.ugui"],"includePlatforms":["Editor"]}

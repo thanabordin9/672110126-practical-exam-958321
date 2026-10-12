@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="23" result="Passed" total="23" passed="23" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:11Z" duration="2.513631">
+  <test-suite type="TestSuite" id="1000" name="Sky Islands" fullname="Sky Islands" runstate="Runnable" testcasecount="23" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:11Z" duration="2.513631" total="23" passed="23" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1030" name="SkyIslands.EditTests.dll" fullname="C:/Users/ASUS/.codex/worktrees/sky-islands/thai wea/SkyIslandsPractical/Library/ScriptAssemblies/SkyIslands.EditTests.dll" runstate="Runnable" testcasecount="23" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:11Z" duration="2.499151" total="23" passed="23" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="111324" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1031" name="StudentGame" fullname="StudentGame" runstate="Runnable" testcasecount="23" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:11Z" duration="2.498508" total="23" passed="23" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1032" name="Tests" fullname="StudentGame.Tests" runstate="Runnable" testcasecount="23" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:11Z" duration="2.497659" total="23" passed="23" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="RunStateTests" fullname="StudentGame.Tests.RunStateTests" classname="StudentGame.Tests.RunStateTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:09Z" duration="0.076114" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1011" name="FallingLosesRegardlessOfScore" fullname="StudentGame.Tests.RunStateTests.FallingLosesRegardlessOfScore" methodname="FallingLosesRegardlessOfScore" classname="StudentGame.Tests.RunStateTests" runstate="Runnable" seed="1872946140" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:09Z" duration="0.037885" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1014" name="InvalidDeltaDoesNotCorruptRun" fullname="StudentGame.Tests.RunStateTests.InvalidDeltaDoesNotCorruptRun" methodname="InvalidDeltaDoesNotCorruptRun" classname="StudentGame.Tests.RunStateTests" runstate="Runnable" seed="1121557425" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:09Z" duration="0.002883" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1007" name="ItemUsesSpecifiedEffect" fullname="StudentGame.Tests.RunStateTests.ItemUsesSpecifiedEffect" classname="StudentGame.Tests.RunStateTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:09Z" duration="0.006736" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1003" name="ItemUsesSpecifiedEffect(&quot;TimeBonus&quot;,33.0f,0)" fullname="StudentGame.Tests.RunStateTests.ItemUsesSpecifiedEffect(&quot;TimeBonus&quot;,33.0f,0)" methodname="ItemUsesSpecifiedEffect" classname="StudentGame.Tests.RunStateTests" runstate="Runnable" seed="192074593" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:09Z" duration="0.001647" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1004" name="ItemUsesSpecifiedEffect(&quot;TimePenalty&quot;,25.0f,0)" fullname="StudentGame.Tests.RunStateTests.ItemUsesSpecifiedEffect(&quot;TimePenalty&quot;,25.0f,0)" methodname="ItemUsesSpecifiedEffect" classname="StudentGame.Tests.RunStateTests" runstate="Runnable" seed="792931889" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:09Z" duration="0.000266" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1005" name="ItemUsesSpecifiedEffect(&quot;ScoreBonus&quot;,30.0f,500)" fullname="StudentGame.Tests.RunStateTests.ItemUsesSpecifiedEffect(&quot;ScoreBonus&quot;,30.0f,500)" methodname="ItemUsesSpecifiedEffect" classname="StudentGame.Tests.RunStateTests" runstate="Runnable" seed="2082460149" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:09Z" duration="0.000160" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1006" name="ItemUsesSpecifiedEffect(&quot;ScorePenalty&quot;,30.0f,-500)" fullname="StudentGame.Tests.RunStateTests.ItemUsesSpecifiedEffect(&quot;ScorePenalty&quot;,30.0f,-500)" methodname="ItemUsesSpecifiedEffect" classname="StudentGame.Tests.RunStateTests" runstate="Runnable" seed="405187680" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:09Z" duration="0.000153" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1013" name="ResetRestoresAllRunValues" fullname="StudentGame.Tests.RunStateTests.ResetRestoresAllRunValues" methodname="ResetRestoresAllRunValues" classname="StudentGame.Tests.RunStateTests" runstate="Runnable" seed="677794518" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:09Z" duration="0.000823" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1002" name="StartsWithThirtySecondsAndZeroScore" fullname="StudentGame.Tests.RunStateTests.StartsWithThirtySecondsAndZeroScore" methodname="StartsWithThirtySecondsAndZeroScore" classname="StudentGame.Tests.RunStateTests" runstate="Runnable" seed="1487117913" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:09Z" duration="0.000364" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1010" name="TimeoutUsesStrictScoreThreshold" fullname="StudentGame.Tests.RunStateTests.TimeoutUsesStrictScoreThreshold" classname="StudentGame.Tests.RunStateTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:09Z" duration="0.001639" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1008" name="TimeoutUsesStrictScoreThreshold(20,&quot;Lost&quot;)" fullname="StudentGame.Tests.RunStateTests.TimeoutUsesStrictScoreThreshold(20,&quot;Lost&quot;)" methodname="TimeoutUsesStrictScoreThreshold" classname="StudentGame.Tests.RunStateTests" runstate="Runnable" seed="1769959062" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:09Z" duration="0.000695" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1009" name="TimeoutUsesStrictScoreThreshold(21,&quot;Won&quot;)" fullname="StudentGame.Tests.RunStateTests.TimeoutUsesStrictScoreThreshold(21,&quot;Won&quot;)" methodname="TimeoutUsesStrictScoreThreshold" classname="StudentGame.Tests.RunStateTests" runstate="Runnable" seed="1052057451" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:09Z" duration="0.000274" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1012" name="TimePenaltyCanEndRunAndLaterItemsAreIgnored" fullname="StudentGame.Tests.RunStateTests.TimePenaltyCanEndRunAndLaterItemsAreIgnored" methodname="TimePenaltyCanEndRunAndLaterItemsAreIgnored" classname="StudentGame.Tests.RunStateTests" runstate="Runnable" seed="1100083975" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:09Z" duration="0.000432" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1015" name="SceneConfigurationTests" fullname="StudentGame.Tests.SceneConfigurationTests" classname="StudentGame.Tests.SceneConfigurationTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:11Z" duration="2.420277" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1028" name="HumanoidStageUsesStarterAssetsAndValidAvatar" fullname="StudentGame.Tests.SceneConfigurationTests.HumanoidStageUsesStarterAssetsAndValidAvatar" methodname="HumanoidStageUsesStarterAssetsAndValidAvatar" classname="StudentGame.Tests.SceneConfigurationTests" runstate="Runnable" seed="27474236" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:09Z" duration="0.412088" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1029" name="HumanoidUsesProvidedCharacterTextures" fullname="StudentGame.Tests.SceneConfigurationTests.HumanoidUsesProvidedCharacterTextures" methodname="HumanoidUsesProvidedCharacterTextures" classname="StudentGame.Tests.SceneConfigurationTests" runstate="Runnable" seed="509262260" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:09Z" duration="0.171421" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1024" name="SceneIsRegisteredAndContainsCameraAndMusic" fullname="StudentGame.Tests.SceneConfigurationTests.SceneIsRegisteredAndContainsCameraAndMusic" classname="StudentGame.Tests.SceneConfigurationTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:10Z" duration="0.781358" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1016" name="SceneIsRegisteredAndContainsCameraAndMusic(&quot;MainMenu&quot;)" fullname="StudentGame.Tests.SceneConfigurationTests.SceneIsRegisteredAndContainsCameraAndMusic(&quot;MainMenu&quot;)" methodname="SceneIsRegisteredAndContainsCameraAndMusic" classname="StudentGame.Tests.SceneConfigurationTests" runstate="Runnable" seed="354976704" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:09Z" duration="0.123056" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1017" name="SceneIsRegisteredAndContainsCameraAndMusic(&quot;StageSelection&quot;)" fullname="StudentGame.Tests.SceneConfigurationTests.SceneIsRegisteredAndContainsCameraAndMusic(&quot;StageSelection&quot;)" methodname="SceneIsRegisteredAndContainsCameraAndMusic" classname="StudentGame.Tests.SceneConfigurationTests" runstate="Runnable" seed="1281688603" result="Passed" start-time="2026-10-12 00:26:09Z" end-time="2026-10-12 00:26:09Z" duration="0.124356" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1018" name="SceneIsRegisteredAndContainsCameraAndMusic(&quot;Options&quot;)" fullname="StudentGame.Tests.SceneConfigurationTests.SceneIsRegisteredAndContainsCameraAndMusic(&quot;Options&quot;)" methodname="SceneIsRegisteredAndContainsCameraAndMusic" classname="StudentGame.Tests.SceneConfigurationTests" runstate="Runnable" seed="2080262576" result="Passed" start-time="2026-10-12 00:26:10Z" end-time="2026-10-12 00:26:10Z" duration="0.086011" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1019" name="SceneIsRegisteredAndContainsCameraAndMusic(&quot;Credits&quot;)" fullname="StudentGame.Tests.SceneConfigurationTests.SceneIsRegisteredAndContainsCameraAndMusic(&quot;Credits&quot;)" methodname="SceneIsRegisteredAndContainsCameraAndMusic" classname="StudentGame.Tests.SceneConfigurationTests" runstate="Runnable" seed="1915227178" result="Passed" start-time="2026-10-12 00:26:10Z" end-time="2026-10-12 00:26:10Z" duration="0.075497" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1020" name="SceneIsRegisteredAndContainsCameraAndMusic(&quot;Stage1&quot;)" fullname="StudentGame.Tests.SceneConfigurationTests.SceneIsRegisteredAndContainsCameraAndMusic(&quot;Stage1&quot;)" methodname="SceneIsRegisteredAndContainsCameraAndMusic" classname="StudentGame.Tests.SceneConfigurationTests" runstate="Runnable" seed="1502451991" result="Passed" start-time="2026-10-12 00:26:10Z" end-time="2026-10-12 00:26:10Z" duration="0.102086" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1021" name="SceneIsRegisteredAndContainsCameraAndMusic(&quot;Stage2&quot;)" fullname="StudentGame.Tests.SceneConfigurationTests.SceneIsRegisteredAndContainsCameraAndMusic(&quot;Stage2&quot;)" methodname="SceneIsRegisteredAndContainsCameraAndMusic" classname="StudentGame.Tests.SceneConfigurationTests" runstate="Runnable" seed="476764256" result="Passed" start-time="2026-10-12 00:26:10Z" end-time="2026-10-12 00:26:10Z" duration="0.096671" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1022" name="SceneIsRegisteredAndContainsCameraAndMusic(&quot;Win&quot;)" fullname="StudentGame.Tests.SceneConfigurationTests.SceneIsRegisteredAndContainsCameraAndMusic(&quot;Win&quot;)" methodname="SceneIsRegisteredAndContainsCameraAndMusic" classname="StudentGame.Tests.SceneConfigurationTests" runstate="Runnable" seed="378677357" result="Passed" start-time="2026-10-12 00:26:10Z" end-time="2026-10-12 00:26:10Z" duration="0.086659" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1023" name="SceneIsRegisteredAndContainsCameraAndMusic(&quot;GameOver&quot;)" fullname="StudentGame.Tests.SceneConfigurationTests.SceneIsRegisteredAndContainsCameraAndMusic(&quot;GameOver&quot;)" methodname="SceneIsRegisteredAndContainsCameraAndMusic" classname="StudentGame.Tests.SceneConfigurationTests" runstate="Runnable" seed="1063108710" result="Passed" start-time="2026-10-12 00:26:10Z" end-time="2026-10-12 00:26:10Z" duration="0.080798" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="ParameterizedMethod" id="1027" name="StageUsesProBuilderAndEnoughPositiveScorePrefabs" fullname="StudentGame.Tests.SceneConfigurationTests.StageUsesProBuilderAndEnoughPositiveScorePrefabs" classname="StudentGame.Tests.SceneConfigurationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-12 00:26:10Z" end-time="2026-10-12 00:26:11Z" duration="1.053571" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1025" name="StageUsesProBuilderAndEnoughPositiveScorePrefabs(&quot;Stage1&quot;)" fullname="StudentGame.Tests.SceneConfigurationTests.StageUsesProBuilderAndEnoughPositiveScorePrefabs(&quot;Stage1&quot;)" methodname="StageUsesProBuilderAndEnoughPositiveScorePrefabs" classname="StudentGame.Tests.SceneConfigurationTests" runstate="Runnable" seed="1320781190" result="Passed" start-time="2026-10-12 00:26:11Z" end-time="2026-10-12 00:26:11Z" duration="0.182277" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1026" name="StageUsesProBuilderAndEnoughPositiveScorePrefabs(&quot;Stage2&quot;)" fullname="StudentGame.Tests.SceneConfigurationTests.StageUsesProBuilderAndEnoughPositiveScorePrefabs(&quot;Stage2&quot;)" methodname="StageUsesProBuilderAndEnoughPositiveScorePrefabs" classname="StudentGame.Tests.SceneConfigurationTests" runstate="Runnable" seed="1801008651" result="Passed" start-time="2026-10-12 00:26:11Z" end-time="2026-10-12 00:26:11Z" duration="0.165095" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: C:/Users/ASUS/AppData/LocalLow/StudentGame/Sky Islands\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

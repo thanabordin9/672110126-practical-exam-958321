@@ -1,1 +1,1 @@
-{"name": "SkyIslands.PlayTests", "references": ["StudentGame", "Unity.InputSystem", "Unity.ugui"], "optionalUnityReferences": ["TestAssemblies"]}
+{"name": "SkyIslands.PlayTests", "references": ["StudentGame", "Unity.InputSystem", "Unity.ugui", "StarterAssets"], "optionalUnityReferences": ["TestAssemblies"]}

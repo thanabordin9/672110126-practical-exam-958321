@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="6" result="Passed" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-12 00:27:40Z" end-time="2026-10-12 00:28:04Z" duration="23.5683225">
+  <test-suite type="TestSuite" id="1015" name="Sky Islands" fullname="Sky Islands" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-12 00:27:40Z" end-time="2026-10-12 00:28:04Z" duration="23.568323" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1009" name="SkyIslands.PlayTests.dll" fullname="C:/Users/ASUS/.codex/worktrees/sky-islands/thai wea/SkyIslandsPractical/Library/ScriptAssemblies/SkyIslands.PlayTests.dll" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-12 00:27:40Z" end-time="2026-10-12 00:28:04Z" duration="23.548075" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="69196" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1010" name="StudentGame" fullname="StudentGame" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-12 00:27:40Z" end-time="2026-10-12 00:28:04Z" duration="23.547039" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1011" name="Tests" fullname="StudentGame.Tests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-12 00:27:40Z" end-time="2026-10-12 00:28:04Z" duration="23.546458" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="GameplayTests" fullname="StudentGame.Tests.GameplayTests" classname="StudentGame.Tests.GameplayTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-12 00:27:40Z" end-time="2026-10-12 00:27:40Z" duration="0.099295" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1002" name="CollisionItemsAreSingleUseAndStoppedAfterGameOver" fullname="StudentGame.Tests.GameplayTests.CollisionItemsAreSingleUseAndStoppedAfterGameOver" methodname="CollisionItemsAreSingleUseAndStoppedAfterGameOver" classname="StudentGame.Tests.GameplayTests" runstate="Runnable" seed="1341302594" result="Passed" start-time="2026-10-12 00:27:40Z" end-time="2026-10-12 00:27:40Z" duration="0.049222" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1003" name="InteractionRequiresExplicitActionAndOnlyOneConsumption" fullname="StudentGame.Tests.GameplayTests.InteractionRequiresExplicitActionAndOnlyOneConsumption" methodname="InteractionRequiresExplicitActionAndOnlyOneConsumption" classname="StudentGame.Tests.GameplayTests" runstate="Runnable" seed="650960759" result="Passed" start-time="2026-10-12 00:27:40Z" end-time="2026-10-12 00:27:40Z" duration="0.004991" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1004" name="MusicMutePersistsAndDuplicateServiceDoesNotSurvive" fullname="StudentGame.Tests.GameplayTests.MusicMutePersistsAndDuplicateServiceDoesNotSurvive" methodname="MusicMutePersistsAndDuplicateServiceDoesNotSurvive" classname="StudentGame.Tests.GameplayTests" runstate="Runnable" seed="723585012" result="Passed" start-time="2026-10-12 00:27:40Z" end-time="2026-10-12 00:27:40Z" duration="0.017284" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1005" name="ScenePlayTests" fullname="StudentGame.Tests.ScenePlayTests" classname="StudentGame.Tests.ScenePlayTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-12 00:27:40Z" end-time="2026-10-12 00:28:04Z" duration="23.443198" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1007" name="CapsuleWalksAndCollectsAlongTheSkyRoute" fullname="StudentGame.Tests.ScenePlayTests.CapsuleWalksAndCollectsAlongTheSkyRoute" methodname="CapsuleWalksAndCollectsAlongTheSkyRoute" classname="StudentGame.Tests.ScenePlayTests" runstate="Runnable" seed="570933943" result="Passed" start-time="2026-10-12 00:27:40Z" end-time="2026-10-12 00:27:54Z" duration="14.167892" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1008" name="HumanoidMovesAndECollectsWithoutCollisionPickup" fullname="StudentGame.Tests.ScenePlayTests.HumanoidMovesAndECollectsWithoutCollisionPickup" methodname="HumanoidMovesAndECollectsWithoutCollisionPickup" classname="StudentGame.Tests.ScenePlayTests" runstate="Runnable" seed="1323214602" result="Passed" start-time="2026-10-12 00:27:54Z" end-time="2026-10-12 00:27:59Z" duration="4.281654" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1006" name="MenusOptionsResultsAndRetryConnectCorrectly" fullname="StudentGame.Tests.ScenePlayTests.MenusOptionsResultsAndRetryConnectCorrectly" methodname="MenusOptionsResultsAndRetryConnectCorrectly" classname="StudentGame.Tests.ScenePlayTests" runstate="Runnable" seed="243581584" result="Passed" start-time="2026-10-12 00:27:59Z" end-time="2026-10-12 00:28:04Z" duration="4.989656" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/ASUS/AppData/LocalLow/StudentGame/Sky Islands\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

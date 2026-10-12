@@ -11,7 +11,7 @@ namespace StudentGame.Tests
     {
         static Type TypeOf(string name)
         {
-            var t=AppDomain.CurrentDomain.GetAssemblies().Select(a=>a.GetType("StudentGame."+name)).FirstOrDefault(x=>x!=null);
+            var t=Type.GetType("StudentGame."+name+", StudentGame");
             Assert.That(t,Is.Not.Null,name+" gameplay component is missing"); return t;
         }
         static object Prop(object o,string n)=>o.GetType().GetProperty(n).GetValue(o);
@@ -55,7 +55,7 @@ namespace StudentGame.Tests
             UnityEngine.Object.Destroy(a.gameObject);yield return null;
             var b=new GameObject("audio reloaded").AddComponent(t);var c=new GameObject("audio duplicate").AddComponent(t);yield return null;
             Assert.That(Prop(b,"MusicVolume"),Is.EqualTo(0f));Assert.That(Prop(b,"EffectsVolume"),Is.EqualTo(0.65f).Within(0.001f));
-            Assert.That(UnityEngine.Object.FindObjectsByType(t,FindObjectsSortMode.None).Length,Is.EqualTo(1));
+            Assert.That(UnityEngine.Object.FindObjectsByType(t).Length,Is.EqualTo(1));
             UnityEngine.Object.Destroy(b.gameObject);yield return null;
             if(had)PlayerPrefs.SetFloat(key,old);else PlayerPrefs.DeleteKey(key);
             if(hadSfx)PlayerPrefs.SetFloat(sfxKey,oldSfx);else PlayerPrefs.DeleteKey(sfxKey);

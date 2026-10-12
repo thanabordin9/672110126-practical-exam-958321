@@ -1,1 +1,1 @@
-{"name": "SkyIslands.EditTests", "references": ["StudentGame"], "includePlatforms": ["Editor"], "optionalUnityReferences": ["TestAssemblies"]}
+{"name": "SkyIslands.EditTests", "references": ["StudentGame", "Unity.ProBuilder", "StarterAssets"], "includePlatforms": ["Editor"], "optionalUnityReferences": ["TestAssemblies"]}

@@ -10,7 +10,7 @@ namespace StudentGame.Tests
         object state;
         [SetUp] public void Setup()
         {
-            stateType = AppDomain.CurrentDomain.GetAssemblies().Select(a => a.GetType("StudentGame.RunState")).FirstOrDefault(t => t != null);
+            stateType = Type.GetType("StudentGame.RunState, StudentGame") ?? Type.GetType("StudentGame.RunState, StudentGame.Rules");
             Assert.That(stateType, Is.Not.Null, "The shared run model has not been implemented.");
             state = Activator.CreateInstance(stateType);
         }
