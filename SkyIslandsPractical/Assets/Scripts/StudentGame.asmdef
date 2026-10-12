@@ -1,0 +1,1 @@
+{"name": "StudentGame", "references": ["Unity.InputSystem", "Unity.Cinemachine", "Unity.ugui", "StarterAssets"]}

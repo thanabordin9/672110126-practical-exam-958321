@@ -1,0 +1,1 @@
+{"name": "SkyIslands.EditTests", "references": ["StudentGame"], "includePlatforms": ["Editor"], "optionalUnityReferences": ["TestAssemblies"]}
