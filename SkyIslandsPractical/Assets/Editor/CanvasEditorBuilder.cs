@@ -9,6 +9,13 @@ namespace SirikanyaKawilawan.Editor
 {
     public static class CanvasEditorBuilder
     {
+        [MenuItem("Sky Islands/Open MainMenu Canvas")]
+        public static void OpenMainMenuCanvas()
+        {
+            EditorSceneManager.OpenScene("Assets/Scenes/MainMenu.unity");
+            Selection.activeGameObject=Object.FindAnyObjectByType<Canvas>().gameObject;
+            var view=EditorWindow.GetWindow<SceneView>();view.in2DMode=true;view.FrameSelected();
+        }
         [MenuItem("Sky Islands/Create Editable Canvas UI")]
         public static void CreateEditableUi()
         {

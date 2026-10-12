@@ -1,0 +1,9 @@
+{
+  "duration": 123.245974,
+  "audio_peak": 1.5881820917129517,
+  "audio_gain": 0.6170577071190936,
+  "width": 1280,
+  "height": 720,
+  "method": "Actual Unity PlayMode rendering, virtual keyboard via Input System, mixed game audio via AudioListener",
+  "score_or_time_modified": false
+}

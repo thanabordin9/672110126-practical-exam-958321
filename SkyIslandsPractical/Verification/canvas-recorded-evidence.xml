@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-12 14:39:28Z" end-time="2026-10-12 14:41:33Z" duration="125.0727069">
+  <test-suite type="TestSuite" id="1021" name="Sky Islands" fullname="Sky Islands" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-12 14:39:28Z" end-time="2026-10-12 14:41:33Z" duration="125.072707" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1015" name="SkyIslands.PlayTests.dll" fullname="C:/Users/ASUS/.codex/worktrees/sky-islands/thai wea/SkyIslandsPractical/Library/ScriptAssemblies/SkyIslands.PlayTests.dll" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-12 14:39:28Z" end-time="2026-10-12 14:41:33Z" duration="125.056703" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="47040" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1016" name="SirikanyaKawilawan" fullname="SirikanyaKawilawan" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-12 14:39:28Z" end-time="2026-10-12 14:41:33Z" duration="125.055618" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1017" name="Tests" fullname="SirikanyaKawilawan.Tests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-12 14:39:28Z" end-time="2026-10-12 14:41:33Z" duration="125.054854" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="ExamEvidenceTests" fullname="SirikanyaKawilawan.Tests.ExamEvidenceTests" classname="SirikanyaKawilawan.Tests.ExamEvidenceTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-12 14:39:28Z" end-time="2026-10-12 14:41:33Z" duration="125.052557" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1002" name="RecordExamEvidence" fullname="SirikanyaKawilawan.Tests.ExamEvidenceTests.RecordExamEvidence" methodname="RecordExamEvidence" classname="SirikanyaKawilawan.Tests.ExamEvidenceTests" runstate="Explicit" seed="1620095141" result="Passed" start-time="2026-10-12 14:39:28Z" end-time="2026-10-12 14:41:33Z" duration="125.029033" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="_SKIPREASON" value="Records an actual engine run for exam evidence; invoke by test filter only." />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/ASUS/AppData/LocalLow/StudentGame/Sky Islands\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

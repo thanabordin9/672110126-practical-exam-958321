@@ -1,40 +1,18 @@
-# Release verification
+# Final submission verification
 
-- Unity Editor: 6000.6.5f1, Windows.
-- EditMode: 26 passed, 0 failed (complete-editmode.xml).
-- PlayMode after final HUD update: 10 passed, 0 failed (complete-playmode-final.xml).
-- Actual virtual keyboard input exercised Capsule and Starter Assets movement and Stage2 E collection. Tests allow device input in the hidden Editor only and restore Input Settings afterward.
-- Scene UI navigation, independent volume settings, persistence, item single-use and retry reset verified.
-- Ch02 texture mapping regression: failed with missing body/hair diffuse textures, then passed after explicit 1001/1002 mapping.
-- Rendered screenshots inspected for MainMenu and both gameplay stages. Screenshot capture uses Camera/RenderTexture because batch-mode Editor has no Game View target.
-- Fresh read-only review found no Critical/Important bug.
+Student: Sirikanya Kawilawan / สิริกัญญา กาวิลาวรรณ / 672110126 / Section 001.
 
-## Deferred minor findings
+- Unity 6000.6.5f1 Windows.
+- EditMode: 34 passed, 0 failed (canvas-editmode-final.xml), including eight saved Canvas and persistent-action checks.
+- Regular PlayMode: 10 passed, 0 failed (canvas-playmode.xml); the explicit recording test is intentionally skipped in the regular suite.
+- Explicit recording: 1 passed, 0 failed (canvas-recorded-evidence.xml). Actual Input System keyboard movement, real collisions, E interaction and natural timeout. No score/time injection or teleportation.
+- UI is saved as Canvas prefab instances in all eight scenes. Runtime reuses them and updates values. All buttons have persistent On Click handlers; sliders have saved change handlers.
+- Packaged combined Latin/Thai OFL font replaces the temporary operating-system font object. License and derivative notice included.
+- Additive Options isolates menu input and keeps the menu canvas/draft alive. Stage Back and direct Stage2 retry verified.
+- Actual 15,000-point Stage1 win at natural timeout, fall loss, retry reset and Stage2 E collection shown in recorded evidence.
+- Windows build succeeded with zero errors; see build.txt and canvas-windows-build.log.
+- Read-only reviewer found no remaining Critical/Important code blocker after the Section001 default was corrected.
 
-- Direct Stage2 entry now remembers Stage2 for retry; verified in PlayMode.
-- Fixed 1600x900 UI coordinates favour 16:9 windows; narrower aspect ratios may clip content. Use the default window or a 16:9 resolution.
+## Limits
 
-## Decisions made
-
-- Used PowerShell/Python bookkeeping instead of Bash-only skill scripts on Windows. Same verification evidence retained; risk is tool-script interoperability rather than game behaviour.
-- Updated ProBuilder/Input System dependencies for the installed Unity Editor; older versions failed on removed EntityId APIs. Cinemachine resolves to the Editor's builtin 6.6.0 package. Exact Unity version is required for reproducible imports.
-
-## Review limits
-
-- Physical speaker output quality depends on the user's audio device; audio source, clip and volume wiring is implemented and tested at software level.
-- Full manual Stage2 win playthrough has not been recorded; Humanoid movement, E collection and shared win/loss boundary rules are verified separately.
-- Windows build succeeded with 0 errors (139,034,451 bytes). The compiled executable initialized its main scene and remained running for 20 seconds in a headless smoke test with no exception/error log; actual scene graphics were inspected through PlayMode renders. See build.txt and player-startup-final.log.
-- Final appearance checked by the author through rendered screenshots, separately from the static reviewer.
-
-## Submission data still needed
-
-Student English namespace/name/code, public repository URL, recorded video evidence and real Git history screenshot. No earlier work history or video URLs are fabricated.
-
-## Identity and scene-flow update
-
-- Editable identity form persists actual user-entered details to StudentIdentity.json and displays them on menu, selection and credits. No test fixture identity is shipped.
-- Editor applies identity to the Resources defaults, synchronizes persisted details before source rewrite, and preserves third-party namespace/assembly names.
-- Shared identity JSON takes precedence over stale Editor/player preferences. Regression failed before the fix and passed afterward.
-- Options loads additively, keeps unsaved menu input, blocks background navigation, selects its OK control and restores menu interaction on closing. Stage Back returns to StageSelection.
-- Static reviewer identified two Important issues; both were corrected and regression-tested.
-
+The fixed UI is designed for a 16:9 window. Video is an automated engine run, not manual student play. It does not show E collection of every item type in Stage2; source prefabs/rule tests supplement the recording. Public repository uses the connected account thanabordin9. Genuine work history begins 12 October 2026 Bangkok time, so daily commit/push coverage for earlier exam dates is not claimed.
