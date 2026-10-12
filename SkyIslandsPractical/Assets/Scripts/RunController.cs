@@ -13,6 +13,7 @@ namespace StudentGame
         public event Action<string> ItemCollected;
         public float StartDelay { get; private set; } = 3f;
         bool ending;
+        void Start() => SceneNavigation.RememberStage(stage);
         void Update()
         {
             if (player == null) return;

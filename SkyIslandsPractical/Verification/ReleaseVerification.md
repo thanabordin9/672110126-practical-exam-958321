@@ -1,8 +1,8 @@
 # Release verification
 
 - Unity Editor: 6000.6.5f1, Windows.
-- EditMode: 23 passed, 0 failed (editmode-final.xml).
-- PlayMode after final HUD update: 6 passed, 0 failed (playmode-release.xml).
+- EditMode: 26 passed, 0 failed (complete-editmode.xml).
+- PlayMode after final HUD update: 10 passed, 0 failed (complete-playmode-final.xml).
 - Actual virtual keyboard input exercised Capsule and Starter Assets movement and Stage2 E collection. Tests allow device input in the hidden Editor only and restore Input Settings afterward.
 - Scene UI navigation, independent volume settings, persistence, item single-use and retry reset verified.
 - Ch02 texture mapping regression: failed with missing body/hair diffuse textures, then passed after explicit 1001/1002 mapping.
@@ -11,7 +11,7 @@
 
 ## Deferred minor findings
 
-- Opening Stage2 directly in the Unity Editor (bypassing MainMenu/StageSelection) retains default LastStage=1 for results/retry. Open MainMenu for normal play.
+- Direct Stage2 entry now remembers Stage2 for retry; verified in PlayMode.
 - Fixed 1600x900 UI coordinates favour 16:9 windows; narrower aspect ratios may clip content. Use the default window or a 16:9 resolution.
 
 ## Decisions made
@@ -29,3 +29,12 @@
 ## Submission data still needed
 
 Student English namespace/name/code, public repository URL, recorded video evidence and real Git history screenshot. No earlier work history or video URLs are fabricated.
+
+## Identity and scene-flow update
+
+- Editable identity form persists actual user-entered details to StudentIdentity.json and displays them on menu, selection and credits. No test fixture identity is shipped.
+- Editor applies identity to the Resources defaults, synchronizes persisted details before source rewrite, and preserves third-party namespace/assembly names.
+- Shared identity JSON takes precedence over stale Editor/player preferences. Regression failed before the fix and passed afterward.
+- Options loads additively, keeps unsaved menu input, blocks background navigation, selects its OK control and restores menu interaction on closing. Stage Back returns to StageSelection.
+- Static reviewer identified two Important issues; both were corrected and regression-tested.
+

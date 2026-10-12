@@ -23,7 +23,7 @@ namespace StudentGame
             UiKit.Text(scorePanel.transform, "Goal", "WIN AT TIMEOUT: MORE THAN 10,000", 22, 115, 330, 25, 14, UiKit.Accent);
             UiKit.Panel(canvas, "Progress Track", 1200, 177, 372, 6, new Color(0.1f, 0.24f, 0.28f));
             progress = UiKit.Panel(canvas, "Score Progress", 1200, 177, 1, 6, UiKit.Accent);
-            UiKit.Button(canvas, "Back to Main Menu", 680, 28, 250, () => SceneNavigation.Load("MainMenu"));
+            UiKit.Button(canvas, "Back to Stage Selection", 640, 28, 320, () => SceneNavigation.Load("StageSelection"));
             var controls = UiKit.Panel(canvas, "Controls", 28, 802, 720, 70, UiKit.Ink);
             UiKit.Text(controls.transform, "Controls Text", run.stage == 1 ? "WASD  MOVE    SHIFT  SPRINT    SPACE  JUMP    ESC  MENU" : "WASD  MOVE    SHIFT  SPRINT    SPACE  JUMP    E  COLLECT", 18, 0, 690, 70, 18, Color.white);
             var legend = UiKit.Panel(canvas, "Item Legend", 1010, 750, 562, 122, UiKit.Ink);

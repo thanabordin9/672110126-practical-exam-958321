@@ -8,8 +8,13 @@ namespace StudentGame
         void Start()
         {
             Cursor.lockState = CursorLockMode.None; Cursor.visible = true;
-            string scene = SceneManager.GetActiveScene().name;
+            string scene = gameObject.scene.name;
             var canvas = UiKit.Canvas();
+            if (scene == "Options")
+            {
+                canvas.GetComponent<Canvas>().sortingOrder = 100;
+                UiKit.Panel(canvas, "Options Overlay", 0, 0, 1600, 900, new Color(0.015f, 0.04f, 0.06f, 0.85f));
+            }
             UiKit.Text(canvas, "Brand", "SKY / ISLANDS", 92, 32, 450, 46, 26, Color.white, true);
             UiKit.Text(canvas, "Scene Label", scene.ToUpperInvariant(), 1240, 32, 280, 46, 18, UiKit.Accent, true);
             var panel = UiKit.Panel(canvas, "Menu Panel", 90, 130, 650, 685, UiKit.Ink);
@@ -21,7 +26,7 @@ namespace StudentGame
                     UiKit.Text(panel.transform, "Title", "SKY\nISLANDS", 38, 82, 570, 205, 82, Color.white, true);
                     UiKit.Text(panel.transform, "Description", "Collect. Explore. Beat the clock.\nTwo challenges above the clouds.", 42, 290, 555, 82, 25, UiKit.Muted);
                     UiKit.Button(panel.transform, "Start Adventure", 42, 405, 565, () => SceneNavigation.Load("StageSelection"), true);
-                    UiKit.Button(panel.transform, "Options", 42, 480, 274, () => SceneNavigation.Load("Options"));
+                    UiKit.Button(panel.transform, "Options", 42, 480, 274, SceneNavigation.OpenOptions);
                     UiKit.Button(panel.transform, "Credits", 331, 480, 276, () => SceneNavigation.Load("Credits"));
                     UiKit.Button(panel.transform, "Exit", 42, 555, 565, SceneNavigation.Quit);
                     break;
@@ -36,10 +41,13 @@ namespace StudentGame
                     Heading(panel.transform, "MAKE IT\nYOUR OWN", "Independent music and sound effect controls.");
                     UiKit.Slider(panel.transform, "Background Music", 42, 310, AudioService.Instance.MusicVolume, AudioService.Instance.SetMusicVolume);
                     UiKit.Slider(panel.transform, "Sound Effects", 42, 460, AudioService.Instance.EffectsVolume, AudioService.Instance.SetEffectsVolume);
-                    UiKit.Button(panel.transform, "OK / Save and Return", 42, 600, 565, () => SceneNavigation.Load("MainMenu"), true); break;
+                    var okay = UiKit.Button(panel.transform, "OK / Save and Return", 42, 600, 565, SceneNavigation.CloseOptions, true);
+                    if (UnityEngine.EventSystems.EventSystem.current != null) UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(okay.gameObject);
+                    break;
                 case "Credits":
                     Heading(panel.transform, "BUILT FOR\nEXPLORATION", "Game Development 3 / Practical Project");
-                    UiKit.Text(panel.transform, "Credits", "Character, dances and audio:\nProvided practical examination resources\n\nHumanoid movement and locomotion:\nUnity Technologies / Starter Assets\n\nLevel geometry: Unity ProBuilder", 42, 300, 565, 285, 23, UiKit.Muted);
+                    StudentDetailsPanel.IdentityText(panel.transform, "Student Credits", "Name: " + (StudentProfile.DisplayName.Length == 0 ? "Not entered" : StudentProfile.DisplayName) + "\nStudent Code: " + (StudentProfile.StudentCode.Length == 0 ? "Not entered" : StudentProfile.StudentCode) + "\nEnglish Name: " + StudentProfile.EnglishName + "   Section: " + StudentProfile.Section, 42, 300, 565, 110, 21);
+                    UiKit.Text(panel.transform, "Credits", "Character and audio: Exam resources\nHumanoid movement: Unity / Starter Assets\nLevel geometry: Unity ProBuilder", 42, 425, 565, 145, 22, UiKit.Muted);
                     Back(panel.transform); break;
                 case "Win": case "GameOver":
                     bool won = scene == "Win";
@@ -54,7 +62,8 @@ namespace StudentGame
             UiKit.Text(info.transform, "Clock Rule", "30 SECONDS. ONE CHALLENGE.", 25, 18, 450, 42, 23, UiKit.Accent, true);
             UiKit.Text(info.transform, "Rules", "Earn more than 10,000 points.\nGold items buy you extra time.\nWatch your step above the clouds.", 25, 68, 450, 112, 23, Color.white);
             UiKit.Panel(canvas, "Footer Background", 90, 836, 1420, 44, UiKit.Ink);
-            UiKit.Text(canvas, "Footer", "WASD MOVE  /  SHIFT SPRINT  /  SPACE JUMP  /  E INTERACT IN STAGE 2", 108, 840, 1360, 35, 16, UiKit.Muted);
+            var identity = StudentDetailsPanel.IdentityText(canvas, "Student Identity", StudentProfile.Summary, 108, 840, 1360, 35, 16);
+            if (scene == "MainMenu") StudentDetailsPanel.Build(canvas, () => identity.text = StudentProfile.Summary);
         }
         static void Heading(Transform panel, string title, string description)
         {

@@ -261,6 +261,7 @@ namespace StudentGame.Editor
         [MenuItem("Sky Islands/Build Windows Game")]
         public static void BuildWindows()
         {
+            StudentSetup.EnsureAsset(); AssetDatabase.SaveAssets();
             Directory.CreateDirectory("Builds/Windows");
             var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions { scenes = EditorBuildSettings.scenes.Where(s => s.enabled).Select(s => s.path).ToArray(), locationPathName = "Builds/Windows/SkyIslands.exe", target = BuildTarget.StandaloneWindows64, options = BuildOptions.None });
             File.WriteAllText("Verification/build.txt", report.summary.result + " / errors: " + report.summary.totalErrors + " / size: " + report.summary.totalSize);

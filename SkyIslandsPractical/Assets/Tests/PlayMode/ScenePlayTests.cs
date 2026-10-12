@@ -18,12 +18,19 @@ namespace StudentGame.Tests
         Mouse mouse;
         InputSettings.BackgroundBehavior previousBackground;
         InputSettings.EditorInputBehaviorInPlayMode previousEditorInput;
+        readonly string[] studentKeys={"SkyIslands.Student.Name","SkyIslands.Student.EnglishName","SkyIslands.Student.Code","SkyIslands.Student.Section"};
+        string[] oldStudent;
+        bool[] hadStudent;
+        string oldStudentFile;
+        string studentFile;
         [SetUp] public void SetupInput()
         {
             previousBackground=InputSystem.settings.backgroundBehavior;
             previousEditorInput=InputSystem.settings.editorInputBehaviorInPlayMode;
             InputSystem.settings.backgroundBehavior=InputSettings.BackgroundBehavior.IgnoreFocus;
             InputSystem.settings.editorInputBehaviorInPlayMode=InputSettings.EditorInputBehaviorInPlayMode.AllDeviceInputAlwaysGoesToGameView;
+            oldStudent=studentKeys.Select(k=>PlayerPrefs.GetString(k)).ToArray();hadStudent=studentKeys.Select(PlayerPrefs.HasKey).ToArray();
+            studentFile=Path.Combine(Application.persistentDataPath,"StudentIdentity.json");oldStudentFile=File.Exists(studentFile)?File.ReadAllText(studentFile):null;
         }
         static Button Button(string text)=>Object.FindObjectsByType<Button>().First(b=>b.name==text);
         void SetKeys(params Key[] values) { InputSystem.QueueStateEvent(keys,new KeyboardState(values)); }
@@ -76,6 +83,54 @@ namespace StudentGame.Tests
             Assert.That(run.ActiveState.Score,Is.GreaterThan(10000));Assert.That(run.ActiveState.Outcome,Is.EqualTo(RunOutcome.Playing));
             run.ActiveState.Tick(100);yield return new WaitForSeconds(0.7f);Assert.That(SceneManager.GetActiveScene().name,Is.EqualTo("Win"));
         }
+        [UnityTest] public IEnumerator StudentDetailsAreEditablePersistedAndShownOnCreditsAndSelection()
+        {
+            SceneNavigation.Load("MainMenu");yield return null;yield return null;
+            var fields=Object.FindObjectsByType<InputField>();
+            Assert.That(fields.Length,Is.EqualTo(4));
+            fields.First(f=>f.name=="Student Name Input").text="Example Student";
+            fields.First(f=>f.name=="English Name Input").text="Example Student";
+            fields.First(f=>f.name=="Student Code Input").text="650510123";
+            fields.First(f=>f.name=="Student Section Input").text="1";
+            Button("Save Student Details").onClick.Invoke();yield return null;
+            Assert.That(PlayerPrefs.GetString("SkyIslands.Student.Code"),Is.EqualTo("650510123"));
+            Assert.That(Object.FindObjectsByType<Text>().First(t=>t.name=="Student Identity").text,Does.Contain("Example Student").And.Contain("650510123"));
+            Button("Credits").onClick.Invoke();yield return null;yield return null;
+            Assert.That(Object.FindObjectsByType<Text>().First(t=>t.name=="Student Credits").text,Does.Contain("Example Student").And.Contain("650510123"));
+            Button("Back").onClick.Invoke();yield return null;yield return null;
+            Assert.That(Object.FindObjectsByType<InputField>().First(f=>f.name=="Student Code Input").text,Is.EqualTo("650510123"));
+            Button("Start Adventure").onClick.Invoke();yield return null;yield return null;
+            Assert.That(Object.FindObjectsByType<Text>().First(t=>t.name=="Student Identity").text,Does.Contain("Example Student").And.Contain("650510123"));
+        }
+        [UnityTest] public IEnumerator OptionsIsAdditiveAndPreservesMainMenuDraft()
+        {
+            SceneNavigation.Load("MainMenu");yield return null;yield return null;
+            var field=Object.FindObjectsByType<InputField>().First(f=>f.name=="Student Name Input");field.text="Unsaved draft";
+            Button("Options").onClick.Invoke();yield return null;yield return null;
+            Assert.That(SceneManager.GetSceneByName("MainMenu").isLoaded,Is.True,"Options must overlay MainMenu, as shown in Fig.1.");
+              Assert.That(SceneManager.GetSceneByName("Options").isLoaded,Is.True);
+              Assert.That(Button("Start Adventure").IsInteractable(),Is.False,"Background menu must not receive keyboard navigation or submit.");
+              Assert.That(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name,Is.EqualTo("OK / Save and Return"));
+            Button("OK / Save and Return").onClick.Invoke();yield return null;yield return null;
+            Assert.That(SceneManager.GetActiveScene().name,Is.EqualTo("MainMenu"));
+              Assert.That(field!=null && field.text=="Unsaved draft",Is.True,"Closing Options must keep the original menu and its input fields.");
+              Assert.That(Button("Start Adventure").IsInteractable(),Is.True);
+        }
+        [UnityTest] public IEnumerator StageBackReturnsToStageSelection()
+        {
+            SceneNavigation.StartStage(1);yield return null;yield return null;
+            Assert.That(Object.FindObjectsByType<Button>().Any(b=>b.name=="Back to Stage Selection"),Is.True);
+            Button("Back to Stage Selection").onClick.Invoke();yield return null;yield return null;
+            Assert.That(SceneManager.GetActiveScene().name,Is.EqualTo("StageSelection"));
+        }
+        [UnityTest] public IEnumerator DirectStageTwoEntryRetriesTheSameStage()
+        {
+            SceneNavigation.StartStage(1);yield return null;yield return null;
+            SceneNavigation.Load("Stage2");yield return null;yield return null;
+            Assert.That(SceneNavigation.LastStage,Is.EqualTo(2),"The loaded stage must identify itself even without StageSelection.");
+            SceneNavigation.Retry();yield return null;yield return null;
+            Assert.That(SceneManager.GetActiveScene().name,Is.EqualTo("Stage2"));
+        }
         [UnityTest] public IEnumerator HumanoidMovesAndECollectsWithoutCollisionPickup()
         {
             SceneNavigation.StartStage(2);yield return null;yield return new WaitForSeconds(3.3f);
@@ -98,6 +153,8 @@ namespace StudentGame.Tests
             if(keys!=null){InputSystem.RemoveDevice(keys);keys=null;}if(mouse!=null){InputSystem.RemoveDevice(mouse);mouse=null;}
             InputSystem.settings.backgroundBehavior=previousBackground;
             InputSystem.settings.editorInputBehaviorInPlayMode=previousEditorInput;
+            for(int i=0;i<studentKeys.Length;i++){if(hadStudent[i])PlayerPrefs.SetString(studentKeys[i],oldStudent[i]);else PlayerPrefs.DeleteKey(studentKeys[i]);}
+            PlayerPrefs.Save();if(oldStudentFile!=null)File.WriteAllText(studentFile,oldStudentFile);else if(File.Exists(studentFile))File.Delete(studentFile);
             SceneNavigation.Load("MainMenu");yield return null;yield return null;
             foreach(var audio in Object.FindObjectsByType<AudioService>())Object.Destroy(audio.gameObject);
             yield return null;
